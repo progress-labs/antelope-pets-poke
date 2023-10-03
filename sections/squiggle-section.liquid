@@ -1,0 +1,44 @@
+<div class="squiggle-bar">
+    <!-- Your content goes here -->
+</div>
+
+{% schema %}
+{
+  "name": "squiggle-bar",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Squiggle Bar",
+      "category": "Custom"
+    }
+  ]
+}
+
+
+{% endschema %}
+
+{% stylesheet %}
+.squiggle-bar {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 5px;
+    background-color: #ff0000; /* Adjust the color */
+    animation: squiggle 10s linear infinite; /* Customize animation properties */
+}
+
+@keyframes squiggle {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(75%);
+    }
+}
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

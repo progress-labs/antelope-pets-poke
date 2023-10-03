@@ -1,0 +1,538 @@
+{
+  "sections": {
+    "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1": {
+      "type": "image-banner",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hero_Image_2.svg",
+        "image_2": "shopify:\/\/shop_images\/Hero_Image_2.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "c65a9e60-4e76-4ff3-95ea-d072f2a3ce9e": {
+      "type": "rich-text",
+      "blocks": {
+        "06d59a60-7888-4a2e-a669-f062c47df43c": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_9.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_9.svg"
+          }
+        }
+      },
+      "block_order": [
+        "06d59a60-7888-4a2e-a669-f062c47df43c"
+      ],
+      "custom_css": [
+        ".content-contianer {position: relative; height: 100px;}",
+        "#bottom_image_divider {position: absolute; height: auto; bottom: 0;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "e427473a-0844-463e-8753-a84cfc6a754f": {
+      "type": "rich-text",
+      "blocks": {
+        "ea06137f-8dda-4d15-9de6-d3ef874c71ea": {
+          "type": "heading",
+          "settings": {
+            "heading": "There's love and then there's pet love.",
+            "heading_size": "h1"
+          }
+        },
+        "template--20990341972266__e427473a-0844-463e-8753-a84cfc6a754f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We get it. They deserve a yummy treat that's actually good for them, too.<\/p>"
+          }
+        },
+        "template--20990341972266__e427473a-0844-463e-8753-a84cfc6a754f-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "OUR PRODUCTS",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "1e2065a2-fccd-4b19-bb38-f8ce68761ca4": {
+          "type": "image_top",
+          "settings": {
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_9.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_9.svg"
+          }
+        }
+      },
+      "block_order": [
+        "ea06137f-8dda-4d15-9de6-d3ef874c71ea",
+        "template--20990341972266__e427473a-0844-463e-8753-a84cfc6a754f-text-1",
+        "template--20990341972266__e427473a-0844-463e-8753-a84cfc6a754f-button-1",
+        "1e2065a2-fccd-4b19-bb38-f8ce68761ca4"
+      ],
+      "custom_css": [
+        ".content-container {position: relative;}",
+        "#top_divider_image {position: absolute; height: auto; width: 100%; top: 0; z-index: 1;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "1d10df60-b13e-4ef0-9f42-e9b5ac040d6a": {
+      "type": "rich-text",
+      "blocks": {
+        "3d825e1b-ebe8-4b4d-9d8b-0c946784dbcd": {
+          "type": "image_top",
+          "settings": {
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_10.svg"
+          }
+        },
+        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dear Poke,",
+            "heading_size": "h1"
+          }
+        },
+        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To my little shadow who has brightened my life immeasurably. <\/p><p><br\/>If you get hungry, I will give you a treat. If you sit, stay, or heel, I will make you a treat that’s wholesome, nutritious, and mouth-wateringly delicious. <br\/> <br\/>If you stay by my side, I will gather the greatest minds and pet lovers and start a company. If you let me share \u0003it with the world, I’ll name it after you.<br\/> <br\/>xoxo,<br\/>Mom<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3d825e1b-ebe8-4b4d-9d8b-0c946784dbcd",
+        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-heading-1",
+        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-text-1"
+      ],
+      "custom_css": [
+        "h2 {color: #e04270; text-align: left;}",
+        "p {text-align: left;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "0df53cfe-da37-47fd-816a-a317bbc594e4": {
+      "type": "collage",
+      "blocks": {
+        "template--20990341972266__0df53cfe-da37-47fd-816a-a317bbc594e4-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dear_Poke_Image.svg"
+          }
+        }
+      },
+      "block_order": [
+        "template--20990341972266__0df53cfe-da37-47fd-816a-a317bbc594e4-image-1"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "61ff49ac-faa3-4a49-b0a3-9736ee52a5be": {
+      "type": "rich-text",
+      "blocks": {
+        "89f39c5f-9f8e-413c-b80d-6268aeabc8e1": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/What_Makes_Us_Diff....svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/What_Makes_Us_Diff....svg"
+          }
+        }
+      },
+      "block_order": [
+        "89f39c5f-9f8e-413c-b80d-6268aeabc8e1"
+      ],
+      "custom_css": [
+        ".content-container {position: relative; height: 100px;}",
+        "#bottom_divider_image {position: absolute; bottom: -10px; width: 100%; height: auto;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "e76778be-6a1a-4845-8f47-ae5a9b283bf9": {
+      "type": "rotating-products",
+      "blocks": {
+        "8e3a1535-83d2-4b33-a6f0-0a676ec9a3e0": {
+          "type": "column",
+          "settings": {
+            "heading": "MADE IN THE USA",
+            "subheading": "Lorem ipsum dolor sit amet consectetur. Tempus nec arcu sit lectus. Mattis velit ipsum sed bibendum lectus vestibulum mauris.",
+            "topImage": "shopify:\/\/shop_images\/Illustration.svg",
+            "color_scheme": "background-1",
+            "productName1": "",
+            "productName2": ""
+          }
+        }
+      },
+      "block_order": [
+        "8e3a1535-83d2-4b33-a6f0-0a676ec9a3e0"
+      ],
+      "custom_css": [
+        ".slideBG {background-color: #0080b7; padding: 20px;}",
+        ".productImage {display: none;}",
+        "h2,p {color: white;}"
+      ],
+      "settings": {
+        "heading": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": "accent-1"
+      }
+    },
+    "c27f34bd-be38-421c-ac6a-af5110c12a87": {
+      "type": "rich-text",
+      "blocks": {
+        "332e80d2-13d9-4c2d-84ee-bf385a61f235": {
+          "type": "image_top",
+          "settings": {
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_16.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_16.svg"
+          }
+        }
+      },
+      "block_order": [
+        "332e80d2-13d9-4c2d-84ee-bf385a61f235"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "2418cdb9-1784-45f9-bc58-c38cc7f59dd0": {
+      "type": "curved-text",
+      "blocks": {
+        "template--20990341972266__2418cdb9-1784-45f9-bc58-c38cc7f59dd0-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Once upon a time...",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--20990341972266__2418cdb9-1784-45f9-bc58-c38cc7f59dd0-heading-1"
+      ],
+      "custom_css": [
+        "h2 {text-align: left;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-0ab182ee-86f5-4b70-b585-5d427b658d04",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "9a7e0e5d-816a-40ea-94dd-1d3c06f06b81": {
+      "type": "image-banner",
+      "custom_css": [
+        "img {padding: 0% 10%; object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Story_Illustration.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "d4412fbd-5f64-4084-b516-5d1b26ef794c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20990341972266__d4412fbd-5f64-4084-b516-5d1b26ef794c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "OUR PRODUCTS",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "2334ea0f-136a-4e9a-ab74-2ebd2ce73ae7": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_14.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_14.svg"
+          }
+        }
+      },
+      "block_order": [
+        "template--20990341972266__d4412fbd-5f64-4084-b516-5d1b26ef794c-button-1",
+        "2334ea0f-136a-4e9a-ab74-2ebd2ce73ae7"
+      ],
+      "custom_css": [
+        ".content-container {position: relative; height: 150px;}",
+        "#bottom_divider_image {position: absolute; bottom: -15px; width: 100%; height: auto;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-ca8d6621-b8a8-4ab4-915d-9e6ed1bb8a18",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "40f66081-3109-4f5a-8126-6770822047d2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20990341972266__40f66081-3109-4f5a-8126-6770822047d2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet the Founder",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--20990341972266__40f66081-3109-4f5a-8126-6770822047d2-heading-1"
+      ],
+      "custom_css": [
+        "h2 {text-align: left;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "ab669948-aa1c-4b86-b8ef-59172d0b1f26": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20990341972266__ab669948-aa1c-4b86-b8ef-59172d0b1f26-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet consec tetur. Integer viverra consec tetur id auctor. Montes a nec lacus eros purus aliquet risus. Rhoncus ac.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--20990341972266__ab669948-aa1c-4b86-b8ef-59172d0b1f26-text-1"
+      ],
+      "custom_css": [
+        "p {color: white;}",
+        ".image-with-text {background-color: #65113b;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_11.svg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "mobile_content_stacking": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "824020ab-f577-4eab-acd6-34feb8fcc438": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20990341972266__824020ab-f577-4eab-acd6-34feb8fcc438-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. A mollis lobortis habitasse bibendum amet egestas tincidunt ullamcorper quis. At facilisi natoque egestas dignissim aliquet nunc bibendum. Elit at felis donec massa sapien. Elit convallis aliquet neque pellentesque at euismod lectus semper. Ornare quam commodo orci sociis.<br\/>Eleifend et eget hac justo viverra.<\/p>"
+          }
+        },
+        "bfff3389-ae1a-40de-b9ad-30f274fb1886": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_15.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_15.svg"
+          }
+        }
+      },
+      "block_order": [
+        "template--20990341972266__824020ab-f577-4eab-acd6-34feb8fcc438-text-1",
+        "bfff3389-ae1a-40de-b9ad-30f274fb1886"
+      ],
+      "custom_css": [
+        "p {color: white;}",
+        ".content-container {position: relative; height: 250px;}",
+        "#bottom_divider_image {position: absolute; bottom: -35px; width: 100%; height: auto;}",
+        "img {transform: rotate(180deg);}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "711d3a8c-483b-4ce4-9fba-0d28ed66c91f": {
+      "type": "rotating-products",
+      "blocks": {
+        "6214e6c8-83f1-4d48-9ec8-5dedd862c930": {
+          "type": "column",
+          "settings": {
+            "heading": "Freeze-Dried Treats",
+            "subheading": "A single ingredient treat made with 100% protein.",
+            "topImage": "shopify:\/\/shop_images\/Freeze-Dried_image.svg",
+            "color_scheme": "background-1",
+            "productImage1": "shopify:\/\/shop_images\/Pokes_Assortment_Freeze-Dried_Beef.svg",
+            "productName1": "BEEF LIVER",
+            "productImage2": "shopify:\/\/shop_images\/Pokes_Assortment_Freeze-Dried_Chicken.svg",
+            "productName2": "CHICKEN LIVER"
+          }
+        }
+      },
+      "block_order": [
+        "6214e6c8-83f1-4d48-9ec8-5dedd862c930"
+      ],
+      "custom_css": [
+        ".slide > h2 {color: #65113b; font-family: \"Peachi\";}",
+        "figcaption,#subheading {color: #eb6a31;}",
+        "h2 {font-family: \"Peachi\";}",
+        "figure {margin: 0;}"
+      ],
+      "settings": {
+        "heading": "The Lineup",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": "scheme-1699ba4e-d8a2-45a9-9a8e-0fc89ff837bf"
+      }
+    },
+    "80bca8f3-d577-4549-904c-019b8859c691": {
+      "type": "rich-text",
+      "blocks": {
+        "4e244945-a059-44e9-9cc3-e3dc2e88e69f": {
+          "type": "image_top",
+          "settings": {
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_15.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_15.svg"
+          }
+        },
+        "template--20990341972266__80bca8f3-d577-4549-904c-019b8859c691-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "follow along @pokes",
+            "heading_size": "h1"
+          }
+        },
+        "0f17e50f-60a8-4f03-a304-3b4fceeb3851": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/BG_Swoosh_3.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_12.svg"
+          }
+        }
+      },
+      "block_order": [
+        "4e244945-a059-44e9-9cc3-e3dc2e88e69f",
+        "template--20990341972266__80bca8f3-d577-4549-904c-019b8859c691-heading-1",
+        "0f17e50f-60a8-4f03-a304-3b4fceeb3851"
+      ],
+      "custom_css": [
+        ".content-container {position: relative; height: 350px;}",
+        "#bottom_divider_image {position: absolute; bottom: -10px; width: 100%; height: auto;}",
+        "#top_divider_image {position: absolute; top: -5px; width: 100%; height: auto; z-index: 2;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-0ab182ee-86f5-4b70-b585-5d427b658d04",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1",
+    "c65a9e60-4e76-4ff3-95ea-d072f2a3ce9e",
+    "main",
+    "e427473a-0844-463e-8753-a84cfc6a754f",
+    "1d10df60-b13e-4ef0-9f42-e9b5ac040d6a",
+    "0df53cfe-da37-47fd-816a-a317bbc594e4",
+    "61ff49ac-faa3-4a49-b0a3-9736ee52a5be",
+    "e76778be-6a1a-4845-8f47-ae5a9b283bf9",
+    "c27f34bd-be38-421c-ac6a-af5110c12a87",
+    "2418cdb9-1784-45f9-bc58-c38cc7f59dd0",
+    "9a7e0e5d-816a-40ea-94dd-1d3c06f06b81",
+    "d4412fbd-5f64-4084-b516-5d1b26ef794c",
+    "40f66081-3109-4f5a-8126-6770822047d2",
+    "ab669948-aa1c-4b86-b8ef-59172d0b1f26",
+    "824020ab-f577-4eab-acd6-34feb8fcc438",
+    "711d3a8c-483b-4ce4-9fba-0d28ed66c91f",
+    "80bca8f3-d577-4549-904c-019b8859c691"
+  ]
+}

@@ -1,0 +1,145 @@
+
+<div class="image-carousel">
+  <div class="carousel-container">
+    <div class="carousel-image">
+      <!-- Background image here (use CSS for background image) -->
+    </div>
+    <div class="carousel-content">
+      <!-- Rich text content here -->
+    </div>
+    <div class="carousel-buttons">
+      <!-- Buttons for scrolling through images and text -->
+      <button class="prev-button">Previous</button>
+      <button class="next-button">Next</button>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Carousel with Buttons",
+  "class": "section",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_image_prev",
+      "label": "Previous Button Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_image_next",
+      "label": "Next Button Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Image Carousel Block",
+      "settings":[]
+    }
+  ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+  /* Style for the image carousel section */
+.image-carousel {
+  background-color: #f0f0f0; /* Set your desired background color */
+  width: 100%;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Style for the container */
+.carousel-container {
+  background-image: url('your-image-url.jpg'); /* Set the background image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Style for the rich text content */
+.carousel-content {
+  background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Style for the buttons */
+.carousel-buttons {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Style for the previous and next buttons */
+.prev-button,
+.next-button {
+  background-image: url('prev-button-image.png'); /* Set the button image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50px; /* Set the button width */
+  height: 50px; /* Set the button height */
+  border: none;
+  cursor: pointer;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentIndex = 0;
+    var images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Array of image URLs
+    var textContent = [
+      'Rich text content 1',
+      'Rich text content 2',
+      'Rich text content 3'
+    ]; // Array of corresponding text content
+
+    var imageContainer = document.querySelector('.carousel-image');
+    var contentContainer = document.querySelector('.carousel-content');
+
+    function updateCarousel() {
+      imageContainer.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+      contentContainer.innerHTML = textContent[currentIndex];
+    }
+
+    function showPrevious() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateCarousel();
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateCarousel();
+    }
+
+    document.querySelector('.prev-button').addEventListener('click', showPrevious);
+    document.querySelector('.next-button').addEventListener('click', showNext);
+
+    // Initial display
+    updateCarousel();
+  });
+</script>
+
+{% endjavascript %}

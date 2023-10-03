@@ -1,0 +1,293 @@
+{{ 'section-rotating-products.css' | asset_url | stylesheet_tag }}
+
+<!--
+  Write your comments here
+  <div class="rotatingProductsContainer">
+    <div class="rotatingProductsContainer__topImage">
+      <img src="{{ section.settings.topImage | img_url: '200x200'}}">
+
+      <div class="rotatingProductsContainer__productSlide">
+        <h2 class="rotatingProductsContainer__title">{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subheading }}</p>
+      </div>
+    </div>
+    <div class="rotatingProductsContainer__imagesContainer">
+      {% for block in section.blocks %}
+        <div class="rotatingProductsContainer__productImages1">
+          <img src="{{ block.settings.productImage | img_url: '200x200'}}">
+          <p>{{ block.settings.productName }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+-->
+
+<div class="fullPageBG color-{{ section.settings.color_scheme }}">
+  <div class="rotatingProductsContainer {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="slideBG">
+      <img
+        id="right_arrow"
+        src="https://cdn.shopify.com/s/files/1/0824/9344/0298/files/Right_Arrow_1.svg?v=1696191496"
+        loading="lazy"
+        alt="right arrow"
+        height="40"
+        width="55"
+        tabindex="0"
+      >
+      <img
+        id="left_arrow"
+        src="https://cdn.shopify.com/s/files/1/0824/9344/0298/files/Left_Arrow_1.svg?v=1696191496"
+        loading="lazy"
+        alt="left arrow"
+        height="40"
+        width="55"
+        tabindex="0"
+      >
+      {% for block in section.blocks %}
+        {% if block.settings.topImage != blank %}
+          <img
+            id="topImage"
+            src="{{ block.settings.topImage | img_url: '200x200'}}"
+            loading="lazy"
+            alt=""
+          >
+        {% endif %}
+        <div class="slide">
+          <h2>{{ block.settings.heading }}</h2>
+          <p id="subheading">{{ block.settings.subheading }}</p>
+          <div class="rotatingProducts__productImages">
+            <div class="productImage">
+              {% if block.settings.productImage1 != blank %}
+                <figure>
+                  <img
+                    id="productImage1"
+                    src="{{ block.settings.productImage1 | img_url: '200x200'}}"
+                    loading="lazy"
+                    alt=""
+                  >
+                  <figcaption>{{ block.settings.productName1 }}</figcaption>
+                </figure>
+              {% endif %}
+            </div>
+            {% if block.settings.productImage2 != blank %}
+              <div class="productImage">
+                <figure>
+                  <img
+                    id="productImage2"
+                    src="{{ block.settings.productImage2 | img_url: '200x200'}}"
+                    loading="lazy"
+                  >
+                  <figcaption>{{ block.settings.productName2 }}</figcaption>
+                </figure>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!--
+  {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
+      <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          {% render 'icon-caret' %}
+        </button>
+        <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+          {%- if section.settings.slider_visual == 'counter' -%}
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          {%- else -%}
+            <div class="slideshow__control-wrapper">
+              {%- for block in section.blocks -%}
+                <button
+                  class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                  aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                  aria-controls="Slider-{{ section.id }}"
+                >
+                  {%- if section.settings.slider_visual == 'numbers' -%}
+                    {{ forloop.index -}}
+                  {%- else -%}
+                    <span class="dot"></span>
+                  {%- endif -%}
+                </button>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          {% render 'icon-caret' %}
+        </button>
+
+        {%- if section.settings.auto_rotate -%}
+          <button
+            type="button"
+            class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+            aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+          >
+            {%- render 'icon-pause' -%}
+            {%- render 'icon-play' -%}
+          </button>
+        {%- endif -%}
+      </div>
+      <noscript>
+        <div class="slider-buttons">
+          <div class="slider-counter">
+            {%- for block in section.blocks -%}
+              <a
+                href="#Slide-{{ section.id }}-{{ forloop.index }}"
+                class="slider-counter__link link"
+                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+              >
+                {{ forloop.index }}
+              </a>
+            {%- endfor -%}
+          </div>
+        </div>
+      </noscript>
+    {%- endif -%}
+  </slideshow-component>
+
+  {%- if request.design_mode -%}
+    <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+-->
+
+{% schema %}
+{
+  "name": "Rotating Products",
+  "settings": [
+    {
+      "type": "text",
+      "id":"heading",
+      "label": "Heading",
+      "default": "Overall Heading"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "Auto Rotate",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 3,
+      "max": 9,
+      "step": 2,
+      "unit": "s",
+      "label": "Speed",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks":[
+    {
+    "type": "column",
+      "name": "Product Page",
+      "settings":[
+        {
+      "type": "text",
+      "id":"heading",
+      "label": "Heading",
+      "default": "Product Title"
+    },
+        {
+      "type": "text",
+      "id":"subheading",
+      "label": "Subheading",
+      "default": "Product Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "topImage",
+      "label": "Large Product Image"
+    },
+        {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },        {
+          "type": "image_picker",
+          "id":"productImage1",
+          "label": "Product Image 1"
+        },
+        {
+          "type": "text",
+          "id": "productName1",
+          "label": "Product Name 1",
+          "default": "Product Name"
+
+        },        {
+          "type": "image_picker",
+          "id":"productImage2",
+          "label": "Product Image 2"
+        },
+        {
+          "type": "text",
+          "id": "productName2",
+          "label": "Product Name 2",
+          "default": "Product Name"
+
+        }
+
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Rotating Products"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

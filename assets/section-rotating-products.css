@@ -1,0 +1,74 @@
+h2,
+figcaption,
+p {
+  text-align: center;
+}
+
+.fullPageBG {
+  background-color: rgb(var(--color-background));
+  width: 100%;
+}
+.rotatingProductsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 %10%;
+  padding: 25px;
+}
+.slideBG {
+  background-color: white;
+  width: 80%;
+  display: flex;
+  position: relative;
+}
+
+#topImage {
+  width: 50%;
+  position: relative;
+  object-fit: cover;
+}
+.slide {
+  width: 50%;
+  height: 100%;
+}
+#productImage1,
+#productImage2 {
+  display: flex;
+  width: 100%;
+  justify-items: center;
+}
+#left_arrow {
+  position: absolute;
+  bottom: -20px;
+  left: -28px;
+}
+#right_arrow {
+  position: absolute;
+  bottom: -20px;
+  right: -28px;
+}
+
+.rotatingProducts__productImages {
+  display: flex;
+}
+
+.productImage {
+  flex: 50%;
+  padding: 5px;
+}
+#subheading {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media screen and (max-width: 767px) {
+  .slideBG {
+    flex-direction: column;
+  }
+  #topImage {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+  }
+}

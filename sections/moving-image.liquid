@@ -1,0 +1,62 @@
+<div class="moving-image"></div>
+<div class="static-line"></div>
+<div class="image-container">
+    {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'original' }}" alt="Moving Image">
+    {% else %}
+        <img src="{{ 'your-default-image-url.jpg' | asset_url }}" alt="Default Image">
+    {% endif %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Image with Animation",
+  "settings": [
+    {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Moving Image",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /* Style for the static line */
+.static-line {
+    position: fixed;
+    top: 50%; /* Adjust the position vertically */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the line thickness as needed */
+    background-color: #ffcc00; /* Line color */
+    z-index: 1; /* Place the line above other content */
+}
+
+/* Style for the image container */
+.image-container {
+    position: fixed;
+    top: 50%; /* Adjust the vertical position */
+    left: -100px; /* Start the image outside the screen */
+    transition: left 5s linear; /* Animation for image movement */
+    z-index: 2; /* Place the image above the line */
+}
+
+/* Style for the moving image */
+.image-container img {
+    width: 100px; /* Adjust the image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

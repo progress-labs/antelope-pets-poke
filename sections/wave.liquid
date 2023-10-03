@@ -1,0 +1,60 @@
+<!-- your-new-section.liquid -->
+<div class="repeating-image-section" style="height: {{ section.settings.section_height }}px;">
+  <div
+    class="repeating-image"
+    style="animation-duration: {{ section.settings.animation_duration }}s; background-image: url('{{ section.settings.repeating-image }}');"
+  ></div>
+</div>
+
+{% schema %}
+{
+  "name": "Repeating Image ",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Repeating Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Animation Duration (seconds)",
+      "id": "animation_duration",
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "label": "Section Height (pixels)",
+      "id": "section_height",
+      "default": "100"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /* your-new-section.scss */
+  .repeating-image-section {
+    width: 100%; /* Set the width of the section as needed */
+    height: 100px; /* Set the height of the section as needed */
+    overflow: hidden;
+  }
+
+  .repeating-image {
+    width: 100px; /* Set the width of your repeating image */
+    height: 100px; /* Set the height of your repeating image */
+    background-repeat: repeat-x; /* Horizontal repeat */
+    animation: moveImage 5s linear infinite; /* Adjust animation properties as needed */
+  }
+
+  @keyframes moveImage {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%); /* Adjust the percentage based on your desired movement */
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
