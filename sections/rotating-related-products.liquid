@@ -1,0 +1,137 @@
+{{ 'section-rotating-related-products.css' | asset_url | stylesheet_tag }}
+
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": true,
+  "pageDots": false,
+  "cellAlign": "left",
+  "imagesLoaded": true,
+  "adaptiveHeight": true,
+  "wrapAround": true
+}
+{%- endcapture -%}
+
+<div class="color-{{ section.settings.color_scheme }}">
+  <div class=" fullPageBG color-{{ section.settings.color_scheme }} page-width">
+    <h2 class="related-products-heading">{{ section.settings.heading }}</h2>
+    <div class="related-products-rotatingProductsContainer {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
+      <div class="related-products-slideBG">
+        <div
+          class="related-products-carousel carousel js-flickity"
+          data-flickity='{ "freeScroll": false, "wrapAround": true, "cellAlign": "left"  }'
+        >
+          {% for block in section.blocks %}
+            <div class="carousel-slide">
+              <a href="{{ block.settings.product_url }}">
+                <div class="related-products-slide-image related-products-slide-image-{{ forloop.index }}">
+                  <style>
+                    .related-products-slide-image-{{ forloop.index }} {
+                      background-image: url({{ block.settings.topImage_desktop | img_url: '600x'}});
+                        display:block;
+                    }
+
+                    @media (max-width: 767px) {
+                      .related-products-slide-image-{{ forloop.index }} {
+                        background-image: url({{ block.settings.topImage_mobile | img_url: '600x'}});
+                      }
+                    }
+                  </style>
+                </div>
+                <p class="product-type">{{ block.settings['product-type'] }}</p>
+                <h3 class="product-name">{{ block.settings['product-name'] }}</h3>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Rotating Related Products",
+  "settings": [
+    {
+      "type": "text",
+      "id":"heading",
+      "label": "Heading",
+      "default": "Overall Heading"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks":[
+    {
+    "type": "column",
+      "name": "Product",
+      "settings":[
+        {
+      "type": "select",
+      "id":"product-type",
+      "label": "Product Type",
+      "options": [
+                    {
+              "value": "Crunchy Biscuits",
+              "label": "Crunchy Biscuits"
+            },
+            {
+              "value": "Freeze-Dried",
+              "label": "Freeze-Dried"
+            },
+            {
+              "value": "Soft & Chewy",
+              "label": "Soft & Chewy"
+            },
+        {
+              "value": "Training Bites",
+              "label": "Training Bites"
+            }
+          ],
+          "default": "Soft & Chewy"
+        },
+        {
+      "type": "text",
+      "id":"product-name",
+      "label": "Product Name",
+      "default": "Product Name"
+    },
+    {
+      "type": "image_picker",
+      "id": "topImage_desktop",
+      "label": "Large Product Image - Desktop"
+    },    {
+      "type": "image_picker",
+      "id": "topImage_mobile",
+      "label": "Large Product Image - Mobile"
+    },
+        {
+          "type": "url",
+          "id": "product_url",
+          "label": "Product URL"
+        }
+
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Rotating Related Products"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

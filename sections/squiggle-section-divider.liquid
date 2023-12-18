@@ -1,0 +1,105 @@
+<div class="squiggle-container" height="100px">
+  {% for block in section.blocks %}
+    {% if block.settings.top_image_desktop != blank %}
+      <img
+        class="top_divider_image_desktop"
+        id="top_divider_image_desktop"
+        src="{{ block.settings.top_image_desktop | img_url: '200x200'}}"
+        loading="lazy"
+        width="100%"
+        height="100%"
+      >
+    {% endif %}
+    {% if block.settings.top_image_mobile != blank %}
+      <img
+        class="top_divider_image_mobile"
+        id="top_divider_image_mobile"
+        src="{{ block.settings.top_image_mobile | img_url: '200x200'}}"
+        loading="lazy"
+        width="100%"
+        height="100%"
+      >
+    {%- endif %}
+    {% if block.settings.bottom_image_desktop != blank %}
+      <img
+        class="bottom_divider_image_desktop"
+        id="bottom_divider_image_desktop"
+        src="{{ block.settings.bottom_image_desktop | img_url: '200x200'}}"
+        loading="lazy"
+        width="100%"
+        height="100%"
+      >
+    {% endif %}
+    {% if block.settings.bottom_image_mobile != blank %}
+      <img
+        class="bottom_divider_image_mobile"
+        id="bottom_divider_image_mobile"
+        src="{{ block.settings.bottom_image_mobile | img_url: '200x200'}}"
+        loading="lazy"
+        width="100%"
+        height="100%"
+      >
+    {%- endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Squiggle Section Divider",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks":[
+       {
+    "type": "image2",
+    "name": "Top Divider Image",
+    "settings":[
+      {
+      "type": "image_picker",
+      "id": "top_image_desktop",
+      "label": "Desktop Image"
+      },
+      {
+      "type": "image_picker",
+      "id": "top_image_mobile",
+      "label": "Mobile Image"
+      }
+    ]
+  },{
+    "type": "image1",
+    "name": "Bottom Divider Image",
+    "settings":[
+      {
+      "type": "image_picker",
+      "id": "bottom_image_desktop",
+      "label": "Desktop Image"
+      },
+      {
+      "type": "image_picker",
+      "id": "bottom_image_mobile",
+      "label": "Mobile Image"
+      }
+    ]
+  }
+  ],
+  "presets":[
+  {
+    "name": "Divider Section"
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .squiggle-container {
+    position: relative;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,173 +1,118 @@
 {{ 'section-rotating-products.css' | asset_url | stylesheet_tag }}
 
-<!--
-  Write your comments here
-  <div class="rotatingProductsContainer">
-    <div class="rotatingProductsContainer__topImage">
-      <img src="{{ section.settings.topImage | img_url: '200x200'}}">
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": true,
+  "pageDots": false,
+  "cellAlign": "left",
+  "imagesLoaded": true,
+  "adaptiveHeight": true,
+}
+{%- endcapture -%}
 
-      <div class="rotatingProductsContainer__productSlide">
-        <h2 class="rotatingProductsContainer__title">{{ section.settings.heading }}</h2>
-        <p>{{ section.settings.subheading }}</p>
-      </div>
-    </div>
-    <div class="rotatingProductsContainer__imagesContainer">
-      {% for block in section.blocks %}
-        <div class="rotatingProductsContainer__productImages1">
-          <img src="{{ block.settings.productImage | img_url: '200x200'}}">
-          <p>{{ block.settings.productName }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
--->
+{%- liquid
+  assign full_width = '100vw'
+  assign widths = '750, 1100, 1500, 1780, 2000, 3000, 3840'
+-%}
+<div class="color-{{ section.settings.color_scheme }}">
+  <div class=" fullPageBG color-{{ section.settings.color_scheme }} page-width">
+    <div class="rotatingProductsContainer {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
+      <h2 class="rotating-products-heading">{{ section.settings.heading }}</h2>
+      <div class="slideBG">
+        <div class="rotating-products-carousel carousel js-flickity" data-flickity="{{ flickity_options | json }}">
+          {% for block in section.blocks %}
+            <div class="carousel-slide">
+              <div class="slide-image slide-image-{{ forloop.index }}">
+                {%- liquid
+                  assign image_height_desktop = section.settings.topImage_dekstop.width | divided_by: section.settings.topImage_dekstop.aspect_ratio
+                  assign image_height_mobile = section.settings.topImage_mobile.width | divided_by: section.settings.topImage_mobile.aspect_ratio
+                  assign sizes_desktop = full_width
+                  assign sizes_mobile = full_width
+                -%}
+                <style>
+                        .slide-image-{{ forloop.index }} {
+                          background-image: url({{ block.settings.topImage_desktop | img_url: '467x'}});
+                            display:flex;
+                            loading: 'lazy',
+                  width: {{section.settings.topImage_dekstop.width}},
+                  height: image_height_desktop,
+                  class: image_class,
+                  sizes: sizes_desktop,
+                  widths: widths
+                        }
 
-<div class="fullPageBG color-{{ section.settings.color_scheme }}">
-  <div class="rotatingProductsContainer {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
-    <h2>{{ section.settings.heading }}</h2>
-    <div class="slideBG">
-      <img
-        id="right_arrow"
-        src="https://cdn.shopify.com/s/files/1/0824/9344/0298/files/Right_Arrow_1.svg?v=1696191496"
-        loading="lazy"
-        alt="right arrow"
-        height="40"
-        width="55"
-        tabindex="0"
-      >
-      <img
-        id="left_arrow"
-        src="https://cdn.shopify.com/s/files/1/0824/9344/0298/files/Left_Arrow_1.svg?v=1696191496"
-        loading="lazy"
-        alt="left arrow"
-        height="40"
-        width="55"
-        tabindex="0"
-      >
-      {% for block in section.blocks %}
-        {% if block.settings.topImage != blank %}
-          <img
-            id="topImage"
-            src="{{ block.settings.topImage | img_url: '200x200'}}"
-            loading="lazy"
-            alt=""
-          >
-        {% endif %}
-        <div class="slide">
-          <h2>{{ block.settings.heading }}</h2>
-          <p id="subheading">{{ block.settings.subheading }}</p>
-          <div class="rotatingProducts__productImages">
-            <div class="productImage">
-              {% if block.settings.productImage1 != blank %}
-                <figure>
-                  <img
-                    id="productImage1"
-                    src="{{ block.settings.productImage1 | img_url: '200x200'}}"
-                    loading="lazy"
-                    alt=""
-                  >
-                  <figcaption>{{ block.settings.productName1 }}</figcaption>
-                </figure>
-              {% endif %}
-            </div>
-            {% if block.settings.productImage2 != blank %}
-              <div class="productImage">
-                <figure>
-                  <img
-                    id="productImage2"
-                    src="{{ block.settings.productImage2 | img_url: '200x200'}}"
-                    loading="lazy"
-                  >
-                  <figcaption>{{ block.settings.productName2 }}</figcaption>
-                </figure>
+                        @media (max-width: 767px) {
+                          .slide-image-{{ forloop.index }} {
+                            background-image: url({{ block.settings.topImage_mobile | img_url: '600x'}});
+                                      loading: 'lazy',
+                  width: section.settings.topImage_mobile.width,
+                  height: image_height_mobile,
+                  class: image_class,
+                  sizes: sizes_mobile,
+                  widths: widths
+                          }
+                        }
+                </style>
               </div>
-            {% endif %}
-          </div>
+              <div class="slide-content">
+                <div class="slide-content--header">
+                  <h2>{{ block.settings.heading }}</h2>
+                  <p class="productDescription">{{ block.settings.subheading }}</p>
+                </div>
+                <div class="rotatingProducts__productImages">
+                  <ul class="product-block-list">
+                    {% if block.settings.productImage1_desktop != blank %}
+                      <li>
+                        <a href="{{ block.settings.product-url1 }}">
+                        <div class="product-block">
+                          <div class="product-block-image">
+                            <img
+                              id="image_desktop-1"
+                              src="{{ block.settings.productImage1_desktop | img_url: '600x'}}"
+                              alt="{{  block.settings.productImage1.alt }}"
+                            >
+                            <img
+                              id="image_mobile-1"
+                              src="{{ block.settings.productImage1_mobile | img_url: '600x'}}"
+                              alt="{{  block.settings.productImage1.alt }}"
+                            >
+                          </div>
+                          <p>{{ block.settings.productName1 }}</p>
+                        </div>
+                        </a>
+                      </li>
+                    {% endif %}
+                    {% if block.settings.productImage2 != blank %}
+                      <li>
+                                                <a href="{{ block.settings.product-url2 }}">
+                        <div class="">
+                          <div class="product-block-image product-block-image-mobile">
+                            <img
+                              id="image_desktop-2"
+                              src="{{ block.settings.productImage2_desktop | img_url: '600x'}}"
+                              alt="{{  block.settings.productImage2.alt }}"
+                            >
+                            <img
+                              id="image_mobile-2"
+                              src="{{ block.settings.productImage2_mobile | img_url: '600x'}}"
+                              alt="{{  block.settings.productImage2.alt }}"
+                            >
+                          </div>
+                          <p>{{ block.settings.productName2 }}</p>
+                        </div>
+                                                </a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
     </div>
   </div>
 </div>
-
-<!--
-  {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
-      <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
-        <button
-          type="button"
-          class="slider-button slider-button--prev"
-          name="previous"
-          aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
-          aria-controls="Slider-{{ section.id }}"
-        >
-          {% render 'icon-caret' %}
-        </button>
-        <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
-          {%- if section.settings.slider_visual == 'counter' -%}
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          {%- else -%}
-            <div class="slideshow__control-wrapper">
-              {%- for block in section.blocks -%}
-                <button
-                  class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                  aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                  aria-controls="Slider-{{ section.id }}"
-                >
-                  {%- if section.settings.slider_visual == 'numbers' -%}
-                    {{ forloop.index -}}
-                  {%- else -%}
-                    <span class="dot"></span>
-                  {%- endif -%}
-                </button>
-              {%- endfor -%}
-            </div>
-          {%- endif -%}
-        </div>
-        <button
-          type="button"
-          class="slider-button slider-button--next"
-          name="next"
-          aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
-          aria-controls="Slider-{{ section.id }}"
-        >
-          {% render 'icon-caret' %}
-        </button>
-
-        {%- if section.settings.auto_rotate -%}
-          <button
-            type="button"
-            class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
-            aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
-          >
-            {%- render 'icon-pause' -%}
-            {%- render 'icon-play' -%}
-          </button>
-        {%- endif -%}
-      </div>
-      <noscript>
-        <div class="slider-buttons">
-          <div class="slider-counter">
-            {%- for block in section.blocks -%}
-              <a
-                href="#Slide-{{ section.id }}-{{ forloop.index }}"
-                class="slider-counter__link link"
-                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-              >
-                {{ forloop.index }}
-              </a>
-            {%- endfor -%}
-          </div>
-        </div>
-      </noscript>
-    {%- endif -%}
-  </slideshow-component>
-
-  {%- if request.design_mode -%}
-    <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
-  {%- endif -%}
--->
 
 {% schema %}
 {
@@ -178,6 +123,11 @@
       "id":"heading",
       "label": "Heading",
       "default": "Overall Heading"
+    },{
+      "type":"text",
+      "id":"id",
+      "label": "Section Identifier",
+      "default":"0"
     },
     {
       "type": "header",
@@ -243,8 +193,12 @@
     },
     {
       "type": "image_picker",
-      "id": "topImage",
-      "label": "Large Product Image"
+      "id": "topImage_desktop",
+      "label": "Large Product Image - Desktop"
+    },    {
+      "type": "image_picker",
+      "id": "topImage_mobile",
+      "label": "Large Product Image - Mobile"
     },
         {
       "type": "color_scheme",
@@ -253,8 +207,13 @@
       "default": "background-1"
     },        {
           "type": "image_picker",
-          "id":"productImage1",
-          "label": "Product Image 1"
+          "id":"productImage1_desktop",
+          "label": "Product Image 1 - Desktop"
+        },
+           {
+          "type": "image_picker",
+          "id":"productImage1_mobile",
+          "label": "Product Image 1 - Mobile"
         },
         {
           "type": "text",
@@ -263,9 +222,18 @@
           "default": "Product Name"
 
         },        {
+          "type": "url",
+          "id": "product-url1",
+          "label": "Product URL"
+        },        {
           "type": "image_picker",
-          "id":"productImage2",
-          "label": "Product Image 2"
+          "id":"productImage2_desktop",
+          "label": "Product Image 2 - Desktop"
+        },
+            {
+          "type": "image_picker",
+          "id":"productImage2_mobile",
+          "label": "Product Image 2 - Mobile"
         },
         {
           "type": "text",
@@ -273,6 +241,10 @@
           "label": "Product Name 2",
           "default": "Product Name"
 
+        },        {
+          "type": "url",
+          "id": "product-url2",
+          "label": "Product URL"
         }
 
       ]

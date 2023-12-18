@@ -8,7 +8,7 @@
         "971d3fb3-2e5e-49d6-a591-ab023c44bf4d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Dogs_1.svg",
+            "image": "shopify:\/\/shop_images\/Desktop_Footer_Graphic_2x_3dc11a66-eddd-421e-a96f-85b186c7f9ee.png",
             "image_width": 550,
             "alignment": "center"
           }
@@ -39,9 +39,11 @@
         ".footer .grid {display: block;}",
         ".footer-block {width: 100%; height: auto;}",
         ".footer-block--newsletter {margin: 0;}",
-        ".footer-block__image-wrapper,.footer__blocks-wrapper {width: 100%; justify-content: center; position: relative; display: flex; height: auto;}",
+        ".footer-block__image-wrapper,.footer__blocks-wrapper img {width: 100%; justify-content: center; position: relative; display: flex; height: auto;}",
         ".footer__content-top {padding: 0;}",
-        "ul{margin: 0 10%;}"
+        "ul {margin: 0 10%;}",
+        ".footer__content-bottom-wrapper {display: none;}",
+        ".footer-block--newsletter {display: none;}"
       ],
       "settings": {
         "color_scheme": "background-2",

@@ -1,0 +1,112 @@
+{{ 'section-rotating-value-props.css' | asset_url | stylesheet_tag }}
+
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": true,
+  "pageDots": false,
+  "cellAlign": "left",
+  "imagesLoaded": true,
+  "adaptiveHeight": true,
+}
+{%- endcapture -%}
+
+<div class="color-{{ section.settings.color_scheme }}">
+  <div class=" fullPageBG color-{{ section.settings.color_scheme }} page-width">
+    <div class="value-prop-rotatingProductsContainer {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
+      <h2 class="value-prop-heading">{{ section.settings.heading }}</h2>
+      <div class="value-prop-slideBG">
+        <div class="value-prop-carousel carousel js-flickity" data-flickity="{{ flickity_options | json }}">
+          {% for block in section.blocks %}
+            <div class="carousel-slide">
+              <div class="value-prop-slide-image value-prop-slide-image-{{ forloop.index }}">
+                <style>
+                  .value-prop-slide-image-{{ forloop.index }} {
+                    background-image: url({{ block.settings.topImage_desktop | img_url: '600x'}});
+                      display:flex;
+                  }
+
+                  @media (max-width: 767px) {
+                    .value-prop-slide-image-{{ forloop.index }} {
+                      background-image: url({{ block.settings.topImage_mobile | img_url: '600x'}});
+                    }
+                  }
+                </style>
+              </div>
+              <div class="value-prop-slide-content">
+                <div class="value-prop-slide-content--header">
+                  <h2>{{ block.settings.heading }}</h2>
+                  <p class="value-prop-description">{{ block.settings.subheading }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Rotating Value Props",
+  "settings": [
+    {
+      "type": "text",
+      "id":"heading",
+      "label": "Heading",
+      "default": "Overall Heading"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks":[
+    {
+    "type": "column",
+      "name": "Value Prop",
+      "settings":[
+        {
+      "type": "text",
+      "id":"heading",
+      "label": "Value Prop",
+      "default": "value Prop Heading"
+    },
+        {
+      "type": "text",
+      "id":"subheading",
+      "label": "Subheading",
+      "default": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "topImage_desktop",
+      "label": "Large Product Image - Desktop"
+    },    {
+      "type": "image_picker",
+      "id": "topImage_mobile",
+      "label": "Large Product Image - Mobile"
+    }
+
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Rotating Value Props"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,46 +1,78 @@
 {
   "sections": {
-    "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1": {
-      "type": "image-banner",
-      "blocks": {
-        "template--20974927216938__c7a8d1c2-0af8-4da7-9a36-f057f6a58de1-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "FAQS testing",
-            "heading_size": "h1"
-          }
-        },
-        "template--20974927216938__c7a8d1c2-0af8-4da7-9a36-f057f6a58de1-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "All the answers you need about Poke's!",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--20974927216938__c7a8d1c2-0af8-4da7-9a36-f057f6a58de1-heading-1",
-        "template--20974927216938__c7a8d1c2-0af8-4da7-9a36-f057f6a58de1-text-1"
-      ],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-left",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "01f9ebdb-335d-4df7-ad60-b3ed4e7c6d8e": {
+      "type": "rotating-products",
+      "blocks": {
+        "38a7782d-7d8a-4bd4-a8c3-c0d718fcc397": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "color_scheme": "background-1",
+            "productName1": "Product Name",
+            "productName2": "Product Name"
+          }
+        },
+        "08b02247-c35e-4e92-9cc6-877f7264ce85": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "color_scheme": "background-1",
+            "productName1": "Product Name",
+            "productName2": "Product Name"
+          }
+        }
+      },
+      "block_order": [
+        "38a7782d-7d8a-4bd4-a8c3-c0d718fcc397",
+        "08b02247-c35e-4e92-9cc6-877f7264ce85"
+      ],
+      "custom_css": [
+        ".dot.is-selected {opacity: 1; background: #65113b;}",
+        ".dot {background: transparent; border: 2px solid #65113b;}"
+      ],
+      "settings": {
+        "heading": "Overall Heading",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "color_scheme": ""
+      }
+    },
+    "8181658b-e814-40e1-81cf-1e8a215a8010": {
+      "type": "rich-text",
+      "blocks": {
+        "7faca35b-7083-47d7-8ab1-87cad594d070": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_15.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_15.svg"
+          }
+        }
+      },
+      "block_order": [
+        "7faca35b-7083-47d7-8ab1-87cad594d070"
+      ],
+      "custom_css": [
+        "img {transform: rotate(180deg);}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "ac8288b8-a720-41dd-b29f-447454d170d5": {
@@ -74,7 +106,7 @@
         "template--21367976001834__ac8288b8-a720-41dd-b29f-447454d170d5-text-1"
       ],
       "custom_css": [
-        "h2, p{text-align: left; }"
+        "h2,p {text-align: left;}"
       ],
       "settings": {
         "desktop_content_position": "left",
@@ -83,6 +115,48 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 16
+      }
+    },
+    "5c9eba89-893b-404f-bec7-1c1862426eff": {
+      "type": "recipe-buttons",
+      "blocks": {
+        "54508adf-d5e6-45b9-90c7-d003badfc5a4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Beef & Cheese",
+            "button_link": "shopify:\/\/pages\/soft-chewy-beef-and-cheese",
+            "item_tag": "beef"
+          }
+        },
+        "b9f6580f-9885-49da-9ac9-291f95e0194b": {
+          "type": "button",
+          "settings": {
+            "button_label": "Bacon & Peanut Butter",
+            "button_link": "shopify:\/\/pages\/soft-chewy-bacon-and-pb",
+            "item_tag": "bacon-pb"
+          }
+        },
+        "44e38c08-f991-465a-902c-3cf87783e36e": {
+          "type": "button",
+          "settings": {
+            "button_label": "Peanut Butter & Banana",
+            "button_link": "shopify:\/\/pages\/soft-chewy-pb-and-banana",
+            "item_tag": "pb-nana"
+          }
+        }
+      },
+      "block_order": [
+        "54508adf-d5e6-45b9-90c7-d003badfc5a4",
+        "b9f6580f-9885-49da-9ac9-291f95e0194b",
+        "44e38c08-f991-465a-902c-3cf87783e36e"
+      ],
+      "custom_css": [
+        ".button.button--primary.beef {background: #ffe02f;}",
+        "hr {margin: 1rem 0;}"
+      ],
+      "settings": {
+        "heading": "Recipe:",
+        "color_scheme": "accent-2"
       }
     },
     "9293a2d6-2bbd-4b30-8de1-f419aff850a2": {
@@ -106,7 +180,7 @@
         "content_alignment": "center",
         "color_scheme": "accent-2",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 8
       }
     },
@@ -161,13 +235,40 @@
         "padding_bottom": 36
       }
     },
+    "e6c9435c-ac78-4ad7-bf1b-1f6e3464868d": {
+      "type": "rich-text",
+      "blocks": {
+        "b6dad312-88f5-4a60-b743-4ee920263d90": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/What_Makes_Us_Diff..._1.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/What_Makes_Us_Diff..._1.svg"
+          }
+        }
+      },
+      "block_order": [
+        "b6dad312-88f5-4a60-b743-4ee920263d90"
+      ],
+      "custom_css": [
+        ".content-container {position: relative; padding-bottom: 30%;}",
+        "#bottom_divider_image_desktop,#bottom_divider_image_mobile {position: absolute; bottom: -30px; width: 100%; height: auto;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "d5df72cc-43b7-4657-9acd-b85444bceff2": {
       "type": "multicolumn",
       "blocks": {
         "template--21367976001834__d5df72cc-43b7-4657-9acd-b85444bceff2-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-10-01_at_8.30.44_PM.png",
+            "image": "shopify:\/\/shop_images\/Group_6.svg",
             "title": "BEEF",
             "text": "",
             "link_label": "",
@@ -177,54 +278,27 @@
         "template--21367976001834__d5df72cc-43b7-4657-9acd-b85444bceff2-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-10-01_at_8.30.47_PM.png",
+            "image": "shopify:\/\/shop_images\/Group_5.svg",
             "title": "CHEESE",
             "text": "",
             "link_label": "",
             "link": ""
           }
-        }
-      },
-      "block_order": [
-        "template--21367976001834__d5df72cc-43b7-4657-9acd-b85444bceff2-column-1",
-        "template--21367976001834__d5df72cc-43b7-4657-9acd-b85444bceff2-column-2"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "accent-1",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "curved_divider_up": false,
-        "curved_divider_down": false,
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "a43457d2-1899-4355-b129-76f141ece1f4": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--21367976001834__a43457d2-1899-4355-b129-76f141ece1f4-column-1": {
+        },
+        "e1e5366a-33a7-47cc-9eab-e26eba9f4efa": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-10-01_at_8.30.51_PM.png",
+            "image": "shopify:\/\/shop_images\/Group_4.svg",
             "title": "OAT FLOUR",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "template--21367976001834__a43457d2-1899-4355-b129-76f141ece1f4-column-2": {
+        "e5c8c619-395a-4683-a4e2-74fe281f3bab": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-10-01_at_8.30.55_PM.png",
+            "image": "shopify:\/\/shop_images\/Group_3.svg",
             "title": "CANE MOLASSES",
             "text": "",
             "link_label": "",
@@ -233,25 +307,53 @@
         }
       },
       "block_order": [
-        "template--21367976001834__a43457d2-1899-4355-b129-76f141ece1f4-column-1",
-        "template--21367976001834__a43457d2-1899-4355-b129-76f141ece1f4-column-2"
+        "template--21367976001834__d5df72cc-43b7-4657-9acd-b85444bceff2-column-1",
+        "template--21367976001834__d5df72cc-43b7-4657-9acd-b85444bceff2-column-2",
+        "e1e5366a-33a7-47cc-9eab-e26eba9f4efa",
+        "e5c8c619-395a-4683-a4e2-74fe281f3bab"
+      ],
+      "custom_css": [
+        "img {padding: 40px;}",
+        "h3 {color: white;}",
+        ".multicolumn-card__info {padding: 0 5% 5% 5%;}"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 2,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
         "color_scheme": "accent-1",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "curved_divider_up": false,
-        "curved_divider_down": false,
-        "padding_top": 36,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "c167b469-c03d-437a-86e9-b4077450479f": {
+      "type": "rich-text",
+      "blocks": {
+        "eb55b898-5669-47fa-9b26-39800f45f782": {
+          "type": "image_top",
+          "settings": {
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_16.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_16.svg"
+          }
+        }
+      },
+      "block_order": [
+        "eb55b898-5669-47fa-9b26-39800f45f782"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
         "padding_bottom": 36
       }
     },
@@ -261,24 +363,49 @@
         "7d6e87fb-ae10-4bb7-a45b-f603d0e95ac8": {
           "type": "column",
           "settings": {
-            "heading": "",
-            "subheading": "",
+            "heading": "TRAINING BITES",
+            "subheading": "Bac'n Me Crazy",
+            "topImage_desktop": "shopify:\/\/shop_images\/Freeze-Dried_image_2.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Freeze-Dried_image_1.svg",
             "color_scheme": "accent-2",
+            "productName1": "Product Name",
+            "productName2": "Product Name"
+          }
+        },
+        "a98aacad-237c-408c-8161-f0a3542bccfa": {
+          "type": "column",
+          "settings": {
+            "heading": "FREEZE-DRIED",
+            "subheading": "Beef Liver",
+            "color_scheme": "background-1",
+            "productName1": "Product Name",
+            "productName2": "Product Name"
+          }
+        },
+        "6deb6648-e104-46ff-880e-292d71a54629": {
+          "type": "column",
+          "settings": {
+            "heading": "CRUNCHY BISCUITS",
+            "subheading": "PB'Nana Pie",
+            "color_scheme": "background-1",
             "productName1": "Product Name",
             "productName2": "Product Name"
           }
         }
       },
       "block_order": [
-        "7d6e87fb-ae10-4bb7-a45b-f603d0e95ac8"
+        "7d6e87fb-ae10-4bb7-a45b-f603d0e95ac8",
+        "a98aacad-237c-408c-8161-f0a3542bccfa",
+        "6deb6648-e104-46ff-880e-292d71a54629"
       ],
       "custom_css": [
         "h2,p {color: #65113b;}",
-        "h2 {font-family: \"Peachi\";}",
-        ".slideBG {background-color: #fffef2;}"
+        "h2 {font-family: \"Nexa\";}",
+        ".slideBG {background-color: #fffef2;}",
+        ".rotatingProductsContainer > h2 {text-align: left;}"
       ],
       "settings": {
-        "heading": "Your pup would also enjoy...",
+        "heading": "Your pup will also enjoy...",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "padding_top": 36,
@@ -322,6 +449,9 @@
         "template--20974927216938__2f089e0e-af7f-43f1-b527-d243ae8f7bbe-collapsible_row-3",
         "template--20974927216938__2f089e0e-af7f-43f1-b527-d243ae8f7bbe-collapsible_row-4"
       ],
+      "custom_css": [
+        "p {text-align: left;}"
+      ],
       "settings": {
         "caption": "",
         "heading": "FAQs",
@@ -337,48 +467,76 @@
         "padding_bottom": 36
       }
     },
-    "3fe1aa9e-e457-4d93-8681-af86acd4de7d": {
-      "type": "rich-text",
+    "5b7ae12d-d356-4314-9c06-7aa1778e567d": {
+      "type": "multicolumn",
       "blocks": {
-        "template--21367976001834__3fe1aa9e-e457-4d93-8681-af86acd4de7d-heading-1": {
-          "type": "heading",
+        "template--21367976001834__5b7ae12d-d356-4314-9c06-7aa1778e567d-column-1": {
+          "type": "column",
           "settings": {
-            "heading": "follow along @pokes",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/Image_1.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         },
-        "688638f3-fca0-4db7-bb4d-de4be26f6c3f": {
-          "type": "image_bottom",
+        "template--21367976001834__5b7ae12d-d356-4314-9c06-7aa1778e567d-column-2": {
+          "type": "column",
           "settings": {
-            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/BG_Swoosh_3.svg",
-            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_12.svg"
+            "image": "shopify:\/\/shop_images\/Image_2.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21367976001834__5b7ae12d-d356-4314-9c06-7aa1778e567d-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_3.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "template--21367976001834__3fe1aa9e-e457-4d93-8681-af86acd4de7d-heading-1",
-        "688638f3-fca0-4db7-bb4d-de4be26f6c3f"
+        "template--21367976001834__5b7ae12d-d356-4314-9c06-7aa1778e567d-column-1",
+        "template--21367976001834__5b7ae12d-d356-4314-9c06-7aa1778e567d-column-2",
+        "template--21367976001834__5b7ae12d-d356-4314-9c06-7aa1778e567d-column-3"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "title": "follow along @pokes",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "scheme-0ab182ee-86f5-4b70-b585-5d427b658d04",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1",
     "main",
+    "01f9ebdb-335d-4df7-ad60-b3ed4e7c6d8e",
+    "8181658b-e814-40e1-81cf-1e8a215a8010",
     "ac8288b8-a720-41dd-b29f-447454d170d5",
+    "5c9eba89-893b-404f-bec7-1c1862426eff",
     "9293a2d6-2bbd-4b30-8de1-f419aff850a2",
     "01c475b5-8a1a-4e39-a899-11fc5660b825",
+    "e6c9435c-ac78-4ad7-bf1b-1f6e3464868d",
     "d5df72cc-43b7-4657-9acd-b85444bceff2",
-    "a43457d2-1899-4355-b129-76f141ece1f4",
+    "c167b469-c03d-437a-86e9-b4077450479f",
     "aeb7b996-0263-4a89-8090-e217e1bd6a36",
     "2f089e0e-af7f-43f1-b527-d243ae8f7bbe",
-    "3fe1aa9e-e457-4d93-8681-af86acd4de7d"
+    "5b7ae12d-d356-4314-9c06-7aa1778e567d"
   ]
 }

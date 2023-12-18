@@ -69,7 +69,7 @@
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="footer-block grid__item grid__item-{{ forloop.index }} {% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -90,6 +90,11 @@
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
+                        <li class="footer-social">
+                          {%- if section.settings.show_social and has_social_icons -%}
+                            {%- render 'social-icons', class: 'social-item-list' -%}
+                          {%- endif -%}
+                        </li>
                         {%- for link in block.settings.menu.links -%}
                           <li>
                             <a
@@ -100,6 +105,11 @@
                             </a>
                           </li>
                         {%- endfor -%}
+                        <li>
+                          <small class="copyright__content"
+                            >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+                          </small>
+                        </li>
                       </ul>
                     {%- endif -%}
                   {%- when 'brand_information' -%}

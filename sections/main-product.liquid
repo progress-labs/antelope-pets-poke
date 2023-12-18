@@ -82,20 +82,61 @@
               {% render block %}
             {%- when 'text' -%}
               <p
-                class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                class="product__text title_background_colors {% if product.metafields.custom.display_title == 'More Cheez Please' or product.metafields.custom.display_title == 'Birthday Cake' %} pink_title_background {% elsif product.metafields.custom.display_title == "Bac'n Me Crazy" %} blue_title_background {% elsif product.metafields.custom.display_title == "P'Nutty for 'Nanas" %} orange_title_background {% elsif product.metafields.custom.display_title == 'Beef Liver' %} red_title_background {% elsif product.metafields.custom.display_title == 'Chicken Liver' %} light_orange_title_background {% elsif product.metafields.custom.display_title == "PB'Nana Pie" %} medium_orange_title_background {% endif %} inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                 {{ block.shopify_attributes }}
               >
                 {{- block.settings.text -}}
               </p>
+            {%- when 'flavor_varieties' -%}
+            <div class="flavor_varieties-wrapper">
+                         <p class="recipe-heading"> Recipe:</p>
+            <div class = "flavor_varieties">
+            <a href="{{ product.url }}" class="flavor-variety-buttons current-product-button">
+              <p class="flavor-variety-buttons--label current-product-button--label" style="text-align: center;">
+                  {{ product.metafields.custom.variant_button | escape }}
+              </p>
+            </a>
+            {%- if block.settings.related_flavor1 != blank -%}
+            <a href="{{ block.settings.related_flavor1_url }}" class="flavor-variety-buttons product-button product-button-1">
+              <p class="flavor-variety-buttons--label product-button--label-1" style="text-align: center;">
+                {{ product.metafields.custom.related_flavor_1 | escape }}
+              </p>
+            </a>
+            {%- endif -%}
+                        {%- if block.settings.related_flavor2 != blank -%}
+            <a href="{{ block.settings.related_flavor2_url }}" class="flavor-variety-buttons product-button product-button-2">
+              <p class="flavor-variety-buttons--label product-button--label-2" style="text-align: center;">
+                {{ block.settings.related_flavor2 }}
+              </p>
+            </a>
+
+            {%- endif -%}
+            </div>
+            <hr>
+            </div>
+            {%- when 'divider-image' -%}
+            <div class="product-title-divider-wrapper">
+              <img src="{{ block.settings.divider_image | img_url:'375x' }}" class="product-title-divider-image">
+            </div> 
             {%- when 'title' -%}
-              <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+              <div class="product__title title_background_colors {% if product.metafields.custom.display_title == 'More Cheez Please' or product.metafields.custom.display_title == 'Birthday Cake' %} pink_title_background {% elsif product.metafields.custom.display_title == "Bac'n Me Crazy" %} blue_title_background {% elsif product.metafields.custom.display_title == "P'Nutty for 'Nanas" %} orange_title_background {% elsif product.metafields.custom.display_title == 'Beef Liver' %} red_title_background {% elsif product.metafields.custom.display_title == 'Chicken Liver' %} light_orange_title_background {% elsif product.metafields.custom.display_title == "PB'Nana Pie" %} medium_orange_title_background {% endif %}" {{ block.shopify_attributes }}>
+            <div class="product__title--text__wrapper">  
+            <h1>{{ product.custom.display_title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
-                    {{ product.title | escape }}
-                  </h2>
+                    {{ product.custom.display_title | escape }}
+                  </h2> 
                 </a>
+            </div>
               </div>
+            {%- when 'displayTitle' -%}
+              <div class="product__title">
+            <div class="product__title--text__wrapper"> 
+              <h1 class="product__title title_background_colors {% if product.metafields.custom.display_title == 'More Cheez Please' or product.metafields.custom.display_title == 'Birthday Cake' %} pink_title_background {% elsif product.metafields.custom.display_title == "Bac'n Me Crazy" %} blue_title_background {% elsif product.metafields.custom.display_title == "P'Nutty for 'Nanas" %} orange_title_background {% elsif product.metafields.custom.display_title == 'Beef Liver' %} red_title_background {% elsif product.metafields.custom.display_title == 'Chicken Liver' %} light_orange_title_background {% elsif product.metafields.custom.display_title == "PB'Nana Pie" %} medium_orange_title_background {% endif %}">
+                {{- block.settings.display_title -}}
+              </h1>
+              </div>
+              </div> 
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -505,11 +546,12 @@
                             </div>
                           {%- endfor -%}
                         </div>
-                        {%- if number_of_slides > 1 -%}
+                        {%- if number_of_slides > 1 -%} 
                           <div class="slider-buttons no-js-hidden">
-                            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-                            <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
-                              {%- if block.settings.pagination_style == 'counter' -%}
+                          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+                           
+                          <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %} slider-counter--{{ section.settings.pagination_style }}{% if section.settings.pagination_style == 'counter' or section.settings.pagination_style == 'numbers' %} caption{% endif %}">">
+                              {%- if block.settings.pagination_style == 'counter' or section.settings.pagination_style == 'counter'-%}
                                 <span class="slider-counter--current">1</span>
                                 <span aria-hidden="true"> / </span>
                                 <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
@@ -517,8 +559,8 @@
                               {%- else -%}
                                 <div class="slideshow__control-wrapper">
                                   {%- for i in (1..number_of_slides) -%}
-                                    <button class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ block.id }}">
-                                      {%- if block.settings.pagination_style == 'numbers' -%}{{ forloop.index }}{% else %}<span class="dot"></span>{%- endif -%}
+                                    <button class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} slider-counter__link--{{ section.settings.pagination_style }} link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }} " aria-controls="Slider-{{ block.id }}">
+                                      {%- if block.settings.pagination_style == 'numbers' or section.settings.pagination_style == 'numbers' -%}{{ forloop.index }}{% else %}<span class="dot"></span>{%- endif -%}
                                     </button>
                                   {%- endfor -%}
                                 </div>
@@ -526,6 +568,27 @@
                             </div>
                             <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
                           </div>
+                            <div class="slider-counter caption"> 
+  <div class="slideshow__control-wrapper">
+    {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+    {% if section.settings.hide_variants and variant_images contains featured_media.src %}
+      <button class="slider-counter__link slider-counter__link--dots link"  aria-controls="Slider-{{ section.id }}">
+        <span class="dot"></span>
+      </button>
+    {% endif %}
+     
+    {%- for media in product.media -%}
+      {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+        {% if section.settings.hide_variants and variant_images contains media.src %}
+        {% else %}
+          <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load {{ forloop.index }} of {{ forloop.length }}" aria-controls="Slider-{{ section.id }}">
+            <span class="dot"></span>
+          </button>
+        {%- endif -%}
+     {%- endunless -%}
+    {%- endfor -%}
+  </div>
+</div>
                         {%- endif -%}
                       </slideshow-component>
                       {%- if block.settings.make_collapsible_row -%}
@@ -692,6 +755,45 @@
       "type": "@app"
     },
     {
+      "type": "flavor_varieties",
+      "name": "Flavor Varieties",
+      "settings": [
+          {
+          "type": "inline_richtext",
+          "id": "related_flavor1",
+          "default": "Related Flavor 1",
+          "label": "Related Flavor 1"
+        },
+                  {
+          "type": "text",
+          "id": "related_flavor1_url",
+          "label": "Related Flavor 1 URL"
+        },
+                  {
+          "type": "inline_richtext",
+          "id": "related_flavor2",
+          "default": "Related Flavor 2",
+          "label": "Related Flavor 2"
+        },
+                  {
+          "type": "text",
+          "id": "related_flavor2_url",
+          "label": "Related Flavor 2 URL"
+        }
+      ]
+    },{
+      "type": "divider-image",
+      "name": "Image",
+      "settings": [
+          {
+                
+          "type": "image_picker",
+          "id": "divider_image",
+          "label": "Divider Image - Mobile"
+        
+          }]
+    },
+    {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
       "settings": [
@@ -720,6 +822,18 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+        {
+      "type": "displayTitle",
+      "name": "Display Title",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "display_title",
+          "default": "Title",
+          "label": "Display Title"
         }
       ]
     },
@@ -2025,6 +2139,27 @@
       "content": "t:sections.main-product.settings.header.content",
       "info": "t:sections.main-product.settings.header.info"
     },
+    
+            {
+          "type": "select",
+          "id": "pagination_style",
+          "options": [
+            {
+              "value": "dots",
+              "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_1"
+            },
+            {
+              "value": "counter",
+              "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_2"
+            },
+            {
+              "value": "numbers",
+              "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_3"
+            }
+          ],
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.label",
+          "default": "counter"
+        },
     {
       "type": "select",
       "id": "media_size",
