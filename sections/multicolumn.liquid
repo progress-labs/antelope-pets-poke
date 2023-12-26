@@ -23,13 +23,20 @@
   endif
 -%}
 
-<div class="multicolumn {% if section.settings.curved_divider_up %} curved-divider-yellow-up {% endif %}{% if section.settings.curved_divider_down %} curved-divider-yellow-down {% endif %} color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'image_top' -%}
         <img
-          id="top_divider_image"
+          id="top_divider_image_desktop"
           src="{{ block.settings.top_divider_image_desktop | img_url: '375x20' }}"
+          loading="lazy"
+          height="20"
+          width="375"
+        >
+        <img
+          id="top_divider_image_mobile"
+          src="{{ block.settings.top_divider_image_mobile | img_url: '375x20' }}"
           loading="lazy"
           height="20"
           width="375"
@@ -203,8 +210,15 @@
     {%- case block.type -%}
       {%- when 'image_bottom' -%}
         <img
-          id="bottom_divider_image"
+          id="bottom_divider_image_desktop"
           src="{{ block.settings.bottom_divider_image_desktop | img_url: '375x20' }}"
+          loading="lazy"
+          height="20"
+          width="375"
+        >
+        <img
+          id="bottom_divider_image_mobile"
+          src="{{ block.settings.bottom_divider_image_mobile | img_url: '375x20' }}"
           loading="lazy"
           height="20"
           width="375"
@@ -375,17 +389,6 @@
       "id": "swipe_on_mobile",
       "default": false,
       "label": "t:sections.multicolumn.settings.swipe_on_mobile.label"
-    },
-          {
-      "type": "checkbox",
-      "id": "curved_divider_up",
-      "default": false,
-      "label": "Curved Section Divider Up"
-    },{
-      "type": "checkbox",
-      "id": "curved_divider_down",
-      "default": false,
-      "label": "Curved Section Divider Down"
     },
 
     {

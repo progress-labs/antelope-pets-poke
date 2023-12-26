@@ -610,6 +610,7 @@ class DeferredMedia extends HTMLElement {
 
 customElements.define('deferred-media', DeferredMedia);
 
+
 class SliderComponent extends HTMLElement {
   constructor() {
     super();
@@ -949,6 +950,7 @@ class SlideshowComponent extends SliderComponent {
     });
   }
 }
+
 
 customElements.define('slideshow-component', SlideshowComponent);
 

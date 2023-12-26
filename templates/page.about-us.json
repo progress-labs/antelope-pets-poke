@@ -1,50 +1,72 @@
 {
   "sections": {
-    "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1": {
-      "type": "image-banner",
-      "custom_css": [
-
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Hero_Image_2.svg",
-        "image_2": "shopify:\/\/shop_images\/Hero_Image_2.svg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "c65a9e60-4e76-4ff3-95ea-d072f2a3ce9e": {
+    "b3cecc7a-3319-409f-8bb5-26dcdd223d72": {
       "type": "rich-text",
-      "blocks": {
-        "06d59a60-7888-4a2e-a669-f062c47df43c": {
-          "type": "image_bottom",
-          "settings": {
-            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_9.svg",
-            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_9.svg"
-          }
-        }
-      },
-      "block_order": [
-        "06d59a60-7888-4a2e-a669-f062c47df43c"
-      ],
-      "custom_css": [
-        ".content-contianer {position: relative; height: 100px;}",
-        "#bottom_image_divider {position: absolute; height: auto; bottom: 0;}"
-      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1": {
+      "type": "image-banner",
+      "blocks": {
+        "e62f9c8a-3dfa-4d85-b863-7144db0d7279": {
+          "type": "heading",
+          "settings": {
+            "heading": "There's love and then there's pet love.",
+            "heading_size": "h1"
+          }
+        },
+        "47f6ae6a-2ec4-4b7b-8cd0-7d610265879c": {
+          "type": "text",
+          "settings": {
+            "text": "We get it. They deserve a yummy treat that's actually good for them, too.",
+            "text_style": "body"
+          }
+        },
+        "7dfe9d52-fbe6-43d5-b1d4-517e28a6d80a": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "OUR PRODUCTS",
+            "button_link_1": "shopify:\/\/pages\/soft-chewy",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "e62f9c8a-3dfa-4d85-b863-7144db0d7279",
+        "47f6ae6a-2ec4-4b7b-8cd0-7d610265879c",
+        "7dfe9d52-fbe6-43d5-b1d4-517e28a6d80a"
+      ],
+      "custom_css": [
+        ".banner__box {position: absolute; bottom: -1px; width: 30%; right: 5%; padding: 0;}",
+        "@media (max-width: 749px) {.banner__box {display: none; }}",
+        ".banner-content-wrapper {padding: 2rem; margin: 0; padding-bottom: 4rem;}",
+        "#banner-box-top {position: absolute; top: -20px; left: 0; width: 100%; display: flex;}",
+        ".banner__buttons {margin-top: 1rem;}",
+        ".banner__heading {margin-top: 0; margin-bottom: 2rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hero_Image_3.svg",
+        "image_2": "shopify:\/\/shop_images\/Hero_Image_3008794e-24e9-4fec-9a75-ad99756bd920.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "main": {
@@ -73,6 +95,7 @@
         },
         "template--20990341972266__e427473a-0844-463e-8753-a84cfc6a754f-button-1": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "OUR PRODUCTS",
             "button_link": "shopify:\/\/collections",
@@ -86,7 +109,7 @@
           "type": "image_top",
           "settings": {
             "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_9.svg",
-            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_9.svg"
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_37.svg"
           }
         }
       },
@@ -98,79 +121,93 @@
       ],
       "custom_css": [
         ".content-container {position: relative;}",
-        "#top_divider_image {position: absolute; height: auto; width: 100%; top: 0; z-index: 1;}"
+        "#top_divider_image_mobile {position: absolute; height: auto; width: 100%; top: -11px; z-index: 1;}",
+        "h2,p {text-align: left;}",
+        "@media (min-width: 750px) {.rich-text {display: none; }}",
+        "#top_divider_image_desktop {display: none;}"
       ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 52
       }
     },
-    "1d10df60-b13e-4ef0-9f42-e9b5ac040d6a": {
+    "4f63d51d-a0c1-461d-9cdb-c535a5f5bab4": {
       "type": "rich-text",
       "blocks": {
-        "3d825e1b-ebe8-4b4d-9d8b-0c946784dbcd": {
+        "74a95cdd-42ea-42d7-937b-503a69c79a8f": {
           "type": "image_top",
           "settings": {
-            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_10.svg"
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_22.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_36.svg"
           }
-        },
-        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-heading-1": {
+        }
+      },
+      "block_order": [
+        "74a95cdd-42ea-42d7-937b-503a69c79a8f"
+      ],
+      "custom_css": [
+        "@media (min-width: 750px) {img {display: none; }}",
+        "#top_divider_image_mobile {top: -2px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "e3199124-3413-419e-ac2e-c2ce6f967ab2": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20990341972266__e3199124-3413-419e-ac2e-c2ce6f967ab2-heading-1": {
           "type": "heading",
           "settings": {
             "heading": "Dear Poke,",
             "heading_size": "h1"
           }
         },
-        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-text-1": {
+        "template--20990341972266__e3199124-3413-419e-ac2e-c2ce6f967ab2-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>To my little shadow who has brightened my life immeasurably. <\/p><p><br\/>If you get hungry, I will give you a treat. If you sit, stay, or heel, I will make you a treat that’s wholesome, nutritious, and mouth-wateringly delicious. <br\/> <br\/>If you stay by my side, I will gather the greatest minds and pet lovers and start a company. If you let me share \u0003it with the world, I’ll name it after you.<br\/> <br\/>xoxo,<br\/>Mom<\/p>"
+            "text_desktop": "<p>To my little shadow who has brightened my life immeasurably. <br\/><br\/>If you get hungry, I will give you a treat. If you sit, stay, or heel, I will make you a treat that’s wholesome, nutritious, and mouth-wateringly delicious. <br\/>\u2028<br\/>If you stay by my side, I will gather the greatest minds and pet lovers and start a company. If you let me share it with the world, I’ll name it after you.<br\/>\u2028<br\/>xoxo,<br\/>Mom<\/p>",
+            "text_mobile": "<p>To my little shadow who has brightened my life immeasurably. <br\/><br\/>If you get hungry, I will give you a treat. If you sit, stay, or heel, I will make you a treat that’s wholesome, nutritious, and mouth-wateringly delicious. <br\/>\u2028<br\/>If you stay by my side, I will gather the greatest minds and pet lovers and start a company. If you let me share it with the world, I’ll name it after you.<br\/>\u2028<br\/>xoxo,<br\/>Mom<\/p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "3d825e1b-ebe8-4b4d-9d8b-0c946784dbcd",
-        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-heading-1",
-        "template--20990341972266__1d10df60-b13e-4ef0-9f42-e9b5ac040d6a-text-1"
+        "template--20990341972266__e3199124-3413-419e-ac2e-c2ce6f967ab2-heading-1",
+        "template--20990341972266__e3199124-3413-419e-ac2e-c2ce6f967ab2-text-1"
       ],
       "custom_css": [
-        "h2 {color: #e04270; text-align: left;}",
-        "p {text-align: left;}"
+        "h2,p {text-align: left; max-width: 460px;}",
+        "h2 {color: #e04270;}",
+        ".image-with-text__content {padding-top: 0;}",
+        ".image-with-text {padding-left: 0; padding-right: 0; padding-bottom: 0;}",
+        "img {padding: 0 calc(4rem \/ var(--font-body-scale)); object-fit: contain; height: auto;}",
+        "@media (min-width: 750px) and (max-width: 900px) {.image-with-text__media {padding-bottom: 230% !important; }}",
+        "@media (max-width: 749px) {.grid {flex-direction: column-reverse; } .image-with-text__media {padding-bottom: 85% !important; }}"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "image": "shopify:\/\/shop_images\/Dear_Poke_Image_Tall.svg",
+        "height": "adapt",
+        "image_mobile": "shopify:\/\/shop_images\/Dear_Poke_Image_6a9f7ef1-cbb8-4945-8615-625f173cb0e5.png",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "accent-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "0df53cfe-da37-47fd-816a-a317bbc594e4": {
-      "type": "collage",
-      "blocks": {
-        "template--20990341972266__0df53cfe-da37-47fd-816a-a317bbc594e4-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Dear_Poke_Image.svg"
-          }
-        }
-      },
-      "block_order": [
-        "template--20990341972266__0df53cfe-da37-47fd-816a-a317bbc594e4-image-1"
-      ],
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "",
-        "padding_top": 0,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "mobile_content_stacking": false,
+        "padding_top": 36,
         "padding_bottom": 0
       }
     },
@@ -180,8 +217,8 @@
         "89f39c5f-9f8e-413c-b80d-6268aeabc8e1": {
           "type": "image_bottom",
           "settings": {
-            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/What_Makes_Us_Diff....svg",
-            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/What_Makes_Us_Diff....svg"
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/What_s_on_the_Menu_Text_7.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/What_Makes_Us_Diff..._68aa257f-6a41-475a-a83e-27f840087699.svg"
           }
         }
       },
@@ -189,8 +226,10 @@
         "89f39c5f-9f8e-413c-b80d-6268aeabc8e1"
       ],
       "custom_css": [
-        ".content-container {position: relative; height: 100px;}",
-        "#bottom_divider_image {position: absolute; bottom: -10px; width: 100%; height: auto;}"
+        ".rich-text {background: #0080b7; padding-bottom: 5%;}",
+        ".content-container {position: relative;}",
+        "#bottom_divider_image_desktop,#bottom_divider_image_mobile {position: absolute; bottom: 25%; width: 110%; height: auto; margin-left: -1rem;}",
+        "@media (max-width: 749px) {.rich-text {height: 30px; } #bottom_divider_image_mobile {bottom: -30px; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -201,35 +240,52 @@
         "padding_bottom": 0
       }
     },
-    "e76778be-6a1a-4845-8f47-ae5a9b283bf9": {
-      "type": "rotating-products",
+    "6ba182b7-58a7-404c-b0a7-6c53eb7ef2a3": {
+      "type": "rotating-value-props",
       "blocks": {
-        "8e3a1535-83d2-4b33-a6f0-0a676ec9a3e0": {
+        "e4f24668-66d4-45dc-8dac-c63acfd14543": {
           "type": "column",
           "settings": {
-            "heading": "MADE IN THE USA",
-            "subheading": "Lorem ipsum dolor sit amet consectetur. Tempus nec arcu sit lectus. Mattis velit ipsum sed bibendum lectus vestibulum mauris.",
-            "topImage": "shopify:\/\/shop_images\/Illustration.svg",
-            "color_scheme": "background-1",
-            "productName1": "",
-            "productName2": ""
+            "heading": "Made in the USA",
+            "subheading": "Each \"P\" shaped treat is made with love right here in the USA, with high-quality & limited ingredients",
+            "topImage_desktop": "shopify:\/\/shop_images\/Made_in_the_USA_Illustration_ad1fbb9a-ef68-497f-8605-5cef5e3e169b.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Illustration_1.svg"
+          }
+        },
+        "2358cd7f-098a-4b66-b439-7e58e21d6f8a": {
+          "type": "column",
+          "settings": {
+            "heading": "Recipes for Every Occasion!",
+            "subheading": "Pets deserve to be celebrated like family – so we’ve made a treat for every occasion (even Birthdays!)",
+            "topImage_desktop": "shopify:\/\/shop_images\/REcipes_Illustration.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Recipes_for_Every_Occasion_Illustration_16bc47f1-7cf8-43d8-b658-8c905063f98c.png"
+          }
+        },
+        "449118a0-f343-4bc7-a858-b516cfe65825": {
+          "type": "column",
+          "settings": {
+            "heading": "BHA Free and No Fillers",
+            "subheading": "Our recipes are made with ingredients you can pronounce, and they're calorie conscious too!",
+            "topImage_desktop": "shopify:\/\/shop_images\/BHA_Illustration_1.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/BHA_Free_Ingredients.png"
           }
         }
       },
       "block_order": [
-        "8e3a1535-83d2-4b33-a6f0-0a676ec9a3e0"
+        "e4f24668-66d4-45dc-8dac-c63acfd14543",
+        "2358cd7f-098a-4b66-b439-7e58e21d6f8a",
+        "449118a0-f343-4bc7-a858-b516cfe65825"
       ],
       "custom_css": [
-        ".slideBG {background-color: #0080b7; padding: 20px;}",
-        ".productImage {display: none;}",
-        "h2,p {color: white;}"
+        ".value-prop-slide-image {background-size: contain;}",
+        ".value-prop-slide-content {background-color: #0080b7;}",
+        "p,h2 {color: white; font-size: 18px;}",
+        "h2 {text-transform: uppercase;}",
+        ".slide-image,.flickity-viewport {background-color: #0080b7;}",
+        "@media (max-width: 749px) {.value-prop-slide-image {min-height: 250px; padding: 0 10%; background-origin: content-box; }}"
       ],
       "settings": {
         "heading": "",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "padding_top": 36,
-        "padding_bottom": 36,
         "color_scheme": "accent-1"
       }
     },
@@ -239,8 +295,8 @@
         "332e80d2-13d9-4c2d-84ee-bf385a61f235": {
           "type": "image_top",
           "settings": {
-            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_16.svg",
-            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_16.svg"
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_35.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_34.svg"
           }
         }
       },
@@ -271,34 +327,40 @@
         "template--20990341972266__2418cdb9-1784-45f9-bc58-c38cc7f59dd0-heading-1"
       ],
       "custom_css": [
-        "h2 {text-align: left;}"
+        "h2 {text-align: left;}",
+        ".rich-text {padding-top: 70px;}",
+        "@media (max-width: 767px) {.rich-text {padding-top: 0px; }}"
       ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "scheme-0ab182ee-86f5-4b70-b585-5d427b658d04",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
     "9a7e0e5d-816a-40ea-94dd-1d3c06f06b81": {
       "type": "image-banner",
       "custom_css": [
-        "img {padding: 0% 10%; object-fit: contain;}"
+        "img {display: flex; object-fit: contain; max-width: 120rem; justify-self: center; max-height: 1500px;}",
+        "#banner-box-top {display: none;}",
+        ".banner__media:first-child {justify-content: center; display: flex !important; align-content: center;}",
+        "@media (max-width: 749px) {img {padding: 0 5%; } .banner__media:first-child {display: none !important; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Story_Illustration.svg",
+        "image": "shopify:\/\/shop_images\/Poke_s_Story_Illustration_3.svg",
+        "image_2": "shopify:\/\/shop_images\/Poke_s_Story_Illustration_2_1.svg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "d4412fbd-5f64-4084-b516-5d1b26ef794c": {
@@ -306,6 +368,7 @@
       "blocks": {
         "template--20990341972266__d4412fbd-5f64-4084-b516-5d1b26ef794c-button-1": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "OUR PRODUCTS",
             "button_link": "shopify:\/\/collections",
@@ -318,8 +381,8 @@
         "2334ea0f-136a-4e9a-ab74-2ebd2ce73ae7": {
           "type": "image_bottom",
           "settings": {
-            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_14.svg",
-            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_14.svg"
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_25.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_41.svg"
           }
         }
       },
@@ -328,8 +391,8 @@
         "2334ea0f-136a-4e9a-ab74-2ebd2ce73ae7"
       ],
       "custom_css": [
-        ".content-container {position: relative; height: 150px;}",
-        "#bottom_divider_image {position: absolute; bottom: -15px; width: 100%; height: auto;}"
+        ".content-container {position: relative; height: 50px;}",
+        "#bottom_divider_image_desktop,#bottom_divider_image_mobile {position: absolute; bottom: -2px; width: 100%; height: auto;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -337,13 +400,36 @@
         "color_scheme": "scheme-ca8d6621-b8a8-4ab4-915d-9e6ed1bb8a18",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 48
+        "padding_bottom": 0
       }
     },
-    "40f66081-3109-4f5a-8126-6770822047d2": {
+    "912ae13a-7a7e-4e95-8e5c-4909ca1e28a4": {
+      "type": "image-banner",
+      "custom_css": [
+        ".banner-box-top {display: none;}",
+        ".banner {background-color: #65113b;}",
+        "img {padding: 0 3rem; object-fit: contain;}",
+        "@media (min-width: 750px) {.banner {display: none; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Meet_the_Founder_Image_2x_1f17def1-d58e-4ddd-b37e-75a22ba16f75.png",
+        "image_2": "shopify:\/\/shop_images\/Meet_the_Founder_Image_3.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "fdafe401-3b79-4581-ba74-ef3e215e2ba2": {
       "type": "rich-text",
       "blocks": {
-        "template--20990341972266__40f66081-3109-4f5a-8126-6770822047d2-heading-1": {
+        "template--20990341972266__fdafe401-3b79-4581-ba74-ef3e215e2ba2-heading-1": {
           "type": "heading",
           "settings": {
             "heading": "Meet the Founder",
@@ -352,50 +438,70 @@
         }
       },
       "block_order": [
-        "template--20990341972266__40f66081-3109-4f5a-8126-6770822047d2-heading-1"
+        "template--20990341972266__fdafe401-3b79-4581-ba74-ef3e215e2ba2-heading-1"
       ],
       "custom_css": [
-        "h2 {text-align: left;}"
+        "h2 {font-size: 26px; text-align: left;}",
+        "@media (max-width: 749px) {}",
+        "@media (min-width: 750px) {h2 {display: none; }}"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-2",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 16
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "ab669948-aa1c-4b86-b8ef-59172d0b1f26": {
       "type": "image-with-text",
       "blocks": {
+        "95fdedb9-06e2-4614-b988-19eefacafbcb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet the Founder",
+            "heading_size": "h1"
+          }
+        },
         "template--20990341972266__ab669948-aa1c-4b86-b8ef-59172d0b1f26-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet consec tetur. Integer viverra consec tetur id auctor. Montes a nec lacus eros purus aliquet risus. Rhoncus ac.<\/p>",
+            "text_desktop": "<p>Wendy Wen, Founder and CEO of Poke’s, is the proud and loving owner of pups Poke, Mochi, and Hoku. She believes all pets deserve to be treated like family – especially at the dinner table. <br\/><br\/>Her vision is for Poke’s to be a universally trusted pet company that offers pets wholesome, healthy, and tasty recipes for every occasion.<br\/><br\/>Wendy was previously the Co-Founder and COO of SENREVE, a digitally-native, omnichannel luxury handbag brand where she built the business into a globally recognized brand in less than five years.<\/p>",
+            "text_mobile": "",
             "text_style": "body"
           }
         }
       },
       "block_order": [
+        "95fdedb9-06e2-4614-b988-19eefacafbcb",
         "template--20990341972266__ab669948-aa1c-4b86-b8ef-59172d0b1f26-text-1"
       ],
       "custom_css": [
-        "p {color: white;}",
-        ".image-with-text {background-color: #65113b;}"
+        ".image-with-text__content {padding: 0 3rem;}",
+        ".image-with-text {padding-top: 36px; padding-bottom: 36px;}",
+        ".image-with-text__media {padding-bottom: 0 !important;}",
+        "p {color: white; text-align: left; font-size: 23px; max-width: 460px;}",
+        "h2 {font-size: 40px;}",
+        "img {height: 100%; object-fit: contain; min-height: 194px; max-height: 650px;}",
+        ".image-with-text__grid {display: flex;}",
+        ".image-with-text__content {padding-left: 1.5rem;}",
+        "@media screen and (max-width: 749px) {.image-with-text {display: none; }}",
+        ".wrapper {background-color: var(--PokesDeepPurple);}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_11.svg",
+        "image": "shopify:\/\/shop_images\/Rectangle_11_2.svg",
         "height": "adapt",
+        "image_mobile": "shopify:\/\/shop_images\/Meet_the_Founder_Image-TALL.png",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
+        "layout": "text_first",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "mobile_content_stacking": true,
+        "mobile_content_stacking": false,
         "padding_top": 12,
         "padding_bottom": 0
       }
@@ -406,14 +512,14 @@
         "template--20990341972266__824020ab-f577-4eab-acd6-34feb8fcc438-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet consectetur. A mollis lobortis habitasse bibendum amet egestas tincidunt ullamcorper quis. At facilisi natoque egestas dignissim aliquet nunc bibendum. Elit at felis donec massa sapien. Elit convallis aliquet neque pellentesque at euismod lectus semper. Ornare quam commodo orci sociis.<br\/>Eleifend et eget hac justo viverra.<\/p>"
+            "text": "<p>Wendy Wen, Founder and CEO of Poke’s, is the proud and loving owner of pups Poke, Mochi, and Hoku. <\/p><p>She believes all pets deserve to be treated like family – especially at the dinner table. <\/p><p>Her vision is for Poke’s to be a universally trusted pet company that offers pets wholesome, healthy, and tasty recipes for every occasion.<\/p><p>Wendy was previously the Co-Founder and COO of SENREVE, a digitally-native, omnichannel luxury handbag brand where she built the business into a globally recognized brand in less than five years.<\/p>"
           }
         },
         "bfff3389-ae1a-40de-b9ad-30f274fb1886": {
           "type": "image_bottom",
           "settings": {
-            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_15.svg",
-            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_15.svg"
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Vector_26.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_28.svg"
           }
         }
       },
@@ -422,17 +528,20 @@
         "bfff3389-ae1a-40de-b9ad-30f274fb1886"
       ],
       "custom_css": [
-        "p {color: white;}",
-        ".content-container {position: relative; height: 250px;}",
-        "#bottom_divider_image {position: absolute; bottom: -35px; width: 100%; height: auto;}",
-        "img {transform: rotate(180deg);}"
+        "p {color: white; text-align: left;}",
+        ".content-container {position: relative;}",
+        ".rich-text {padding-bottom: 5%;}",
+        "#bottom_divider_image_desktop,#bottom_divider_image_mobile {position: absolute; bottom: -2px; width: 100%; height: auto;}",
+        "img {transform: rotate(180deg);}",
+        "@media (max-width: 749px) {.rich-text {padding-bottom: 70px; }}",
+        "@media (min-width: 750px) {p {display: none; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-2",
         "full_width": true,
-        "padding_top": 8,
+        "padding_top": 16,
         "padding_bottom": 0
       }
     },
@@ -444,26 +553,104 @@
           "settings": {
             "heading": "Freeze-Dried Treats",
             "subheading": "A single ingredient treat made with 100% protein.",
-            "topImage": "shopify:\/\/shop_images\/Freeze-Dried_image.svg",
+            "topImage_desktop": "shopify:\/\/shop_images\/What_s_on_the_Menu_Section_1.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Freeze-Dried_image_b259e5da-49d3-4859-ae6b-89d03cc1ea3f.png",
             "color_scheme": "background-1",
-            "productImage1": "shopify:\/\/shop_images\/Pokes_Assortment_Freeze-Dried_Beef.svg",
-            "productName1": "BEEF LIVER",
-            "productImage2": "shopify:\/\/shop_images\/Pokes_Assortment_Freeze-Dried_Chicken.svg",
-            "productName2": "CHICKEN LIVER"
+            "productImage1_desktop": "shopify:\/\/shop_images\/Pokes_Assortment_Freeze-Dried_Beef_86e5b5ba-03b0-41bf-9e3d-7fee779ee4cf.svg",
+            "productImage1_mobile": "shopify:\/\/shop_images\/Pokes_Assortment_Freeze-Dried_Beef_06c7ee03-8047-47c4-81e6-ad57cc2ad58e.png",
+            "productName1": "Beef Liver",
+            "product-url1": "",
+            "productName2": "",
+            "product-url2": ""
+          }
+        },
+        "7eba2cd7-15db-4059-8ac1-8a02ddee5eea": {
+          "type": "column",
+          "settings": {
+            "heading": "Birthday Cake",
+            "subheading": "A birthday treat your pup can enjoy all year round!",
+            "topImage_desktop": "shopify:\/\/shop_images\/What_s_on_the_Menu_Section.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Birthday_Card_Image.png",
+            "color_scheme": "background-1",
+            "productImage1_desktop": "shopify:\/\/shop_images\/Pokes_Assortment_Birthday_Cake_Biscuits_1_1.svg",
+            "productImage1_mobile": "shopify:\/\/shop_images\/Pokes_Assortment_Birthday_Cake_Biscuits.png",
+            "productName1": "Peanut Butter & Vanilla",
+            "product-url1": "",
+            "productName2": "",
+            "product-url2": ""
+          }
+        },
+        "39b9f431-16bc-4820-a8d1-d4479907778f": {
+          "type": "column",
+          "settings": {
+            "heading": "Soft & Chewy",
+            "subheading": "Soft baked treats, perfect for pups of all ages",
+            "topImage_desktop": "shopify:\/\/shop_images\/What_s_on_the_Menu_Section_2.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Soft_Chewy_Card_Image.png",
+            "color_scheme": "background-1",
+            "productImage1_desktop": "shopify:\/\/shop_images\/Pokes_Assortment_Bac_n_Me_Crazy_Soft_2.svg",
+            "productImage1_mobile": "shopify:\/\/shop_images\/Pokes_Assortment_Bac_n_Me_Crazy_Soft_38da1996-1293-4a3d-8aa8-e6d7fb09df78.png",
+            "productName1": "Bacon & Peanut Butter",
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
+          }
+        },
+        "53aea407-78bb-4b0a-9cdb-e7bf0e5366ca": {
+          "type": "column",
+          "settings": {
+            "heading": "Training",
+            "subheading": "Low-calorie bites perfect for daily training",
+            "topImage_desktop": "shopify:\/\/shop_images\/What_s_on_the_Menu_Section_3.svg",
+            "topImage_mobile": "shopify:\/\/shop_images\/Training_Card_Image_e9955f5c-e2c8-4694-835f-925b8abdaddb.png",
+            "color_scheme": "background-1",
+            "productImage1_desktop": "shopify:\/\/shop_images\/More_Cheese_Please_Training_-_Desktop.svg",
+            "productImage1_mobile": "shopify:\/\/shop_images\/Pokes_Assortment_P_Nutty_for_Nanas_Training_549e20ab-88a9-4f74-b6fe-c6e9e4669c9e.png",
+            "productName1": "Beef & Cheese",
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
+          }
+        },
+        "aaa3bc81-d34b-403d-9c09-d2f176d7395d": {
+          "type": "column",
+          "settings": {
+            "heading": "Biscuits",
+            "subheading": "Limited ingredient treats for pups looking for a crunchy bite",
+            "topImage_desktop": "shopify:\/\/shop_images\/What_s_on_the_Menu_Section_1.png",
+            "topImage_mobile": "shopify:\/\/shop_images\/Biscuits_Card_Image_4.png",
+            "color_scheme": "background-1",
+            "productImage1_desktop": "shopify:\/\/shop_images\/Pokes_Assortment_PB_Nana_Pie_Biscuits_1_1.svg",
+            "productImage1_mobile": "shopify:\/\/shop_images\/Pokes_Assortment_PB_Nana_Pie_Biscuits.png",
+            "productName1": "Peanut Butter & Banana",
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
           }
         }
       },
       "block_order": [
-        "6214e6c8-83f1-4d48-9ec8-5dedd862c930"
+        "6214e6c8-83f1-4d48-9ec8-5dedd862c930",
+        "7eba2cd7-15db-4059-8ac1-8a02ddee5eea",
+        "39b9f431-16bc-4820-a8d1-d4479907778f",
+        "53aea407-78bb-4b0a-9cdb-e7bf0e5366ca",
+        "aaa3bc81-d34b-403d-9c09-d2f176d7395d"
       ],
       "custom_css": [
-        ".slide > h2 {color: #65113b; font-family: \"Peachi\";}",
-        "figcaption,#subheading {color: #eb6a31;}",
+        ".slideBG h2 {color: #65113b; font-family: \"Peachi\";}",
+        "p {color: #eb6a31;}",
         "h2 {font-family: \"Peachi\";}",
-        "figure {margin: 0;}"
+        ".product-block p {color: #65113b; text-transform: uppercase;}",
+        ".dot {display: none;}",
+        ".rotatingProductsContainer {padding-top: 0; padding-bottom: 20%;}",
+        ".rotating-products-heading {color: white;}",
+        ".slide-content--header > p {min-height: 81px; position: relative; display: flex; align-content: center; justify-content: center; flex-wrap: wrap;}",
+        ".slide-content--header > h2 {margin-bottom: 0; margin-top: 1rem; min-height: 34px;}",
+        "a {text-decoration: none;}"
       ],
       "settings": {
         "heading": "The Lineup",
+        "id": "1",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "padding_top": 36,
@@ -471,68 +658,124 @@
         "color_scheme": "scheme-1699ba4e-d8a2-45a9-9a8e-0fc89ff837bf"
       }
     },
-    "80bca8f3-d577-4549-904c-019b8859c691": {
-      "type": "rich-text",
+    "780bb683-4cb1-4be4-8a44-eb7d62dec4c8": {
+      "type": "multicolumn",
       "blocks": {
-        "4e244945-a059-44e9-9cc3-e3dc2e88e69f": {
+        "template--20990341972266__780bb683-4cb1-4be4-8a44-eb7d62dec4c8-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_1.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20990341972266__780bb683-4cb1-4be4-8a44-eb7d62dec4c8-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_2.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20990341972266__780bb683-4cb1-4be4-8a44-eb7d62dec4c8-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_3.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "b4d71dc6-ed73-4f96-8a17-56e0f5267bf7": {
           "type": "image_top",
           "settings": {
-            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_15.svg",
-            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_15.svg"
-          }
-        },
-        "template--20990341972266__80bca8f3-d577-4549-904c-019b8859c691-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "follow along @pokes",
-            "heading_size": "h1"
-          }
-        },
-        "0f17e50f-60a8-4f03-a304-3b4fceeb3851": {
-          "type": "image_bottom",
-          "settings": {
-            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/BG_Swoosh_3.svg",
-            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Vector_12.svg"
+            "top_divider_image_desktop": "shopify:\/\/shop_images\/Vector_26.svg",
+            "top_divider_image_mobile": "shopify:\/\/shop_images\/Vector_39.svg"
           }
         }
       },
       "block_order": [
-        "4e244945-a059-44e9-9cc3-e3dc2e88e69f",
-        "template--20990341972266__80bca8f3-d577-4549-904c-019b8859c691-heading-1",
-        "0f17e50f-60a8-4f03-a304-3b4fceeb3851"
+        "template--20990341972266__780bb683-4cb1-4be4-8a44-eb7d62dec4c8-column-1",
+        "template--20990341972266__780bb683-4cb1-4be4-8a44-eb7d62dec4c8-column-2",
+        "template--20990341972266__780bb683-4cb1-4be4-8a44-eb7d62dec4c8-column-3",
+        "b4d71dc6-ed73-4f96-8a17-56e0f5267bf7"
       ],
+      "disabled": true,
       "custom_css": [
-        ".content-container {position: relative; height: 350px;}",
-        "#bottom_divider_image {position: absolute; bottom: -10px; width: 100%; height: auto;}",
-        "#top_divider_image {position: absolute; top: -5px; width: 100%; height: auto; z-index: 2;}"
+        ".multicolumn {position: relative; padding-top: 5%;}",
+        "#top_divider_image_mobile {top: -2px; overflow-x: visible;}",
+        "#top_divider_image_desktop {top: -2px; overflow-x: visible;}"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "title": "follow along @pokes",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "scheme-0ab182ee-86f5-4b70-b585-5d427b658d04",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c116eea7-1b9d-416f-98e0-5baa201cd963": {
+      "type": "rich-text",
+      "blocks": {
+        "eedf260e-01a5-4bf4-95ee-6dcf12e3e4dd": {
+          "type": "image_bottom",
+          "settings": {
+            "bottom_divider_image_desktop": "shopify:\/\/shop_images\/Footer_BG_3.svg",
+            "bottom_divider_image_mobile": "shopify:\/\/shop_images\/Footer_BG_3.svg"
+          }
+        }
+      },
+      "block_order": [
+        "eedf260e-01a5-4bf4-95ee-6dcf12e3e4dd"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.rich-text {padding-bottom: 25px; }}",
+        "#bottom_divider_image_mobile {bottom: -10px; overflow-x: visible;}",
+        "#bottom_divider_image_desktop {bottom: -30px; overflow-x: visible;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
         "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 0
+        "padding_top": 0,
+        "padding_bottom": 88
       }
     }
   },
   "order": [
+    "b3cecc7a-3319-409f-8bb5-26dcdd223d72",
     "c7a8d1c2-0af8-4da7-9a36-f057f6a58de1",
-    "c65a9e60-4e76-4ff3-95ea-d072f2a3ce9e",
     "main",
     "e427473a-0844-463e-8753-a84cfc6a754f",
-    "1d10df60-b13e-4ef0-9f42-e9b5ac040d6a",
-    "0df53cfe-da37-47fd-816a-a317bbc594e4",
+    "4f63d51d-a0c1-461d-9cdb-c535a5f5bab4",
+    "e3199124-3413-419e-ac2e-c2ce6f967ab2",
     "61ff49ac-faa3-4a49-b0a3-9736ee52a5be",
-    "e76778be-6a1a-4845-8f47-ae5a9b283bf9",
+    "6ba182b7-58a7-404c-b0a7-6c53eb7ef2a3",
     "c27f34bd-be38-421c-ac6a-af5110c12a87",
     "2418cdb9-1784-45f9-bc58-c38cc7f59dd0",
     "9a7e0e5d-816a-40ea-94dd-1d3c06f06b81",
     "d4412fbd-5f64-4084-b516-5d1b26ef794c",
-    "40f66081-3109-4f5a-8126-6770822047d2",
+    "912ae13a-7a7e-4e95-8e5c-4909ca1e28a4",
+    "fdafe401-3b79-4581-ba74-ef3e215e2ba2",
     "ab669948-aa1c-4b86-b8ef-59172d0b1f26",
     "824020ab-f577-4eab-acd6-34feb8fcc438",
     "711d3a8c-483b-4ce4-9fba-0d28ed66c91f",
-    "80bca8f3-d577-4549-904c-019b8859c691"
+    "780bb683-4cb1-4be4-8a44-eb7d62dec4c8",
+    "c116eea7-1b9d-416f-98e0-5baa201cd963"
   ]
 }

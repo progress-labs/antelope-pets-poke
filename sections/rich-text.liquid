@@ -14,13 +14,20 @@
   }
 {%- endstyle -%}
 
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}" position="relative">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'image_top' -%}
         <img
-          id="top_divider_image"
+          id="top_divider_image_desktop"
           src="{{ block.settings.top_divider_image_desktop | img_url: '375x20' }}"
+          loading="lazy"
+          height="20"
+          width="375"
+        >
+        <img
+          id="top_divider_image_mobile"
+          src="{{ block.settings.top_divider_image_mobile | img_url: '375x20' }}"
           loading="lazy"
           height="20"
           width="375"
@@ -107,26 +114,20 @@
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'image_bottom' -%}
-        <div class="image_text_container" position="relative">
-          {%- if block.settings.bottom_divider_text_image_desktop != blank -%}
-            <img
-              id="bottom_divider_text_image"
-              src="{{ block.settings.bottom_divider_text_image_desktop | img_url: '375x20' }}"
-              loading="lazy"
-              height="20"
-              width="375"
-              z-index="1"
-              position="absolute"
-            >
-          {%- endif -%}
-          <img
-            id="bottom_divider_image"
-            src="{{ block.settings.bottom_divider_image_desktop | img_url: '375x20' }}"
-            loading="lazy"
-            height="20"
-            width="375"
-          >
-        </div>
+        <img
+          id="bottom_divider_image_desktop"
+          src="{{ block.settings.bottom_divider_image_desktop | img_url: '375x20' }}"
+          loading="lazy"
+          height="20"
+          width="375"
+        >
+        <img
+          id="bottom_divider_image_mobile"
+          src="{{ block.settings.bottom_divider_image_mobile | img_url: '375x20' }}"
+          loading="lazy"
+          height="20"
+          width="375"
+        >
     {%- endcase -%}
   {%- endfor -%}
 </div>
@@ -373,15 +374,6 @@
           "type": "image_picker",
           "id": "bottom_divider_image_mobile",
           "label": "Mobile Image "
-        },        {
-          "type": "image_picker",
-          "id": "bottom_divider_text_image_desktop",
-          "label": "Desktop Text Image"
-        },
-                {
-          "type": "image_picker",
-          "id": "bottom_divider_text_image_mobile",
-          "label": "Mobile Text Image"
         }
       ]
 
