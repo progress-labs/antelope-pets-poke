@@ -26,6 +26,11 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+    @media(max-width:500px){
+      .product__text_m{
+        margin-top:0;
+      } 
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -82,7 +87,7 @@
               {% render block %}
             {%- when 'text' -%}
               <p
-                class="product__text title_background_colors {% if product.metafields.custom.display_title == 'More Cheez Please' or product.metafields.custom.display_title == 'Birthday Cake' %} pink_title_background {% elsif product.metafields.custom.display_title == "Bac'n Me Crazy" %} blue_title_background {% elsif product.metafields.custom.display_title == "P'Nutty for 'Nanas" %} orange_title_background {% elsif product.metafields.custom.display_title == 'Beef Liver' %} red_title_background {% elsif product.metafields.custom.display_title == 'Chicken Liver' %} light_orange_title_background {% elsif product.metafields.custom.display_title == "PB'Nana Pie" %} medium_orange_title_background {% endif %} inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                class="product__text title_background_colors product__text_m  {% if product.metafields.custom.display_title == 'More Cheez Please' or product.metafields.custom.display_title == 'Birthday Cake' %} pink_title_background {% elsif product.metafields.custom.display_title == "Bac'n Me Crazy" %} blue_title_background {% elsif product.metafields.custom.display_title == "P'Nutty for 'Nanas" %} orange_title_background {% elsif product.metafields.custom.display_title == 'Beef Liver' %} red_title_background {% elsif product.metafields.custom.display_title == 'Chicken Liver' %} light_orange_title_background {% elsif product.metafields.custom.display_title == "PB'Nana Pie" %} medium_orange_title_background {% endif %} inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                 {{ block.shopify_attributes }}
               >
                 {{- block.settings.text -}}

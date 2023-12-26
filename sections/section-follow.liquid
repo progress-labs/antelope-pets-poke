@@ -1,0 +1,83 @@
+<!-- Start Follow Us Section -->
+<style>
+    .section-f{
+        margin-top: 70px;
+        margin-bottom: 300px;
+    }
+    .section-f__title h1,h2,h3{
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 70px;
+        color: #e04270;
+    }
+    .section-f__row{
+        display: flex;
+        gap: 50px;
+
+    }
+    .section-f__col{
+        flex: 0 1 33.3333%;
+    }
+    .section-f__col img{
+      width: 100%;
+    }
+    @media(max-width:500px){
+      .section-f{
+        margin: 0 0 100px 0;
+      }
+      .section-f__row{
+        gap: 10px;
+
+      }
+      .section-f__title h1, h2, h3{
+        margin: 0 0 20px;
+        text-align: center;
+      }
+    }
+</style>
+<section class="section-f">
+    <div class="page-width">
+        <div class="section-f__title">{{ section.settings.headline }}</div>
+    </div>
+    <div class="section-f__row">
+        {% for block in section.blocks %}
+            <div class="section-f__col">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+            </div>
+        {%endfor%}
+    </div>
+</section>
+{% schema %}
+    {
+      "name": "Follow section",
+      "class": "follow-section",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "headline",
+          "label": "Title ",
+          "default": "<h3>follow along @pokes</h3>"
+        }
+      ],
+      "blocks": [
+        {
+        "type": "slides",
+          "name": "Image Item",
+          "limit": 3,
+          "settings": [
+            {
+              "type": "image_picker",
+              "label": "Image",
+              "id": "image"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Follow section",
+          "category": "Image"
+        }
+      ]
+    }
+  {% endschema %}

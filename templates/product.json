@@ -106,7 +106,7 @@
         "ul {padding: 0; margin: 0;}",
         ".icon-caret {color: var(--PokesDeepPurple);}",
         "@media (min-width: 750px) {.caption-with-letter-spacing {margin-bottom: 1rem; }}",
-        "button:disabled svg{fill: #65113B;}"
+        "button:disabled svg {fill: #65113b;}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -121,7 +121,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 100,
-        "padding_bottom": 12
+        "padding_bottom": 16
       }
     },
     "related-products": {
@@ -158,11 +158,11 @@
         "6bb947c8-71c7-483b-bdb3-dc9e2ccdb57a"
       ],
       "custom_css": [
-        ".rich-text {height: 200px;}",
+        ".rich-text {height: 200px; margin-top: 130px;}",
         ".content-container {position: relative;}",
         "#bottom_divider_image_desktop,#bottom_divider_image_mobile {position: absolute; bottom: -25px; width: 110%; height: auto; margin-left: 0;}",
         "@media (max-width: 749px) {.rich-text {height: 20rem; }}",
-        "@media (max-width: 500px) {.rich-text {height: 15rem; }}",
+        "@media (max-width: 500px) {.rich-text {height: 15rem; margin-top: 10px; }}",
         "@media (max-width: 350px) {.rich-text {height: 10rem; }}"
       ],
       "settings": {
@@ -393,6 +393,7 @@
       "custom_css": [
         "h2 {font-family: \"Peachi\"; font-size: 40px; margin-bottom: 5rem;}",
         "a {text-decoration: none;}",
+        ".product-type {min-height: auto;}",
         ".related-products-rotatingProductsContainer {align-content: center; display: flex; flex-wrap: wrap; align-items: flex-start;}",
         "@media (max-width: 749px) {h2 {font-size: 26px; } p {font-size: 13px; } h3 {font-size: 16px; }}"
       ],
@@ -462,6 +463,40 @@
         "padding_bottom": 100
       }
     },
+    "f91e9377-8a69-4f15-ac26-04e2b3f4a0ff": {
+      "type": "section-follow",
+      "blocks": {
+        "7bd92a7c-9e39-42b4-ba96-ebb3b1d9bfc2": {
+          "type": "slides",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_1_83c05cb5-a8d6-4c84-b33d-53c371816d94.png"
+          }
+        },
+        "e81a73f6-5869-4f88-91cd-c951d8d5909c": {
+          "type": "slides",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_2_36fd3486-3510-4bfe-9d8a-b436ec84aaff.png"
+          }
+        },
+        "02fafa8c-b7d6-411b-9d6f-1dcdfe090e6a": {
+          "type": "slides",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_3_e094aa22-cd15-4053-9ec6-051a8070e376.png"
+          }
+        }
+      },
+      "block_order": [
+        "7bd92a7c-9e39-42b4-ba96-ebb3b1d9bfc2",
+        "e81a73f6-5869-4f88-91cd-c951d8d5909c",
+        "02fafa8c-b7d6-411b-9d6f-1dcdfe090e6a"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "headline": "<h3>follow along @pokes<\/h3>"
+      }
+    },
     "996997d7-84f4-429f-90e1-9ab9a89a5d2f": {
       "type": "rich-text",
       "blocks": {
@@ -501,6 +536,7 @@
     "85edd739-f315-469d-aef8-07c016fa630d",
     "150e320e-2ff9-431e-9e33-d2ba7723b8d1",
     "9c7d6967-5d8e-42ae-8c59-fe5696188aa1",
+    "f91e9377-8a69-4f15-ac26-04e2b3f4a0ff",
     "996997d7-84f4-429f-90e1-9ab9a89a5d2f"
   ]
 }
