@@ -8,47 +8,6 @@
         "padding_bottom": 28
       }
     },
-    "01f9ebdb-335d-4df7-ad60-b3ed4e7c6d8e": {
-      "type": "rotating-products",
-      "blocks": {
-        "38a7782d-7d8a-4bd4-a8c3-c0d718fcc397": {
-          "type": "column",
-          "settings": {
-            "heading": "",
-            "subheading": "",
-            "color_scheme": "background-1",
-            "productName1": "Product Name",
-            "productName2": "Product Name"
-          }
-        },
-        "08b02247-c35e-4e92-9cc6-877f7264ce85": {
-          "type": "column",
-          "settings": {
-            "heading": "",
-            "subheading": "",
-            "color_scheme": "background-1",
-            "productName1": "Product Name",
-            "productName2": "Product Name"
-          }
-        }
-      },
-      "block_order": [
-        "38a7782d-7d8a-4bd4-a8c3-c0d718fcc397",
-        "08b02247-c35e-4e92-9cc6-877f7264ce85"
-      ],
-      "custom_css": [
-        ".dot.is-selected {opacity: 1; background: #65113b;}",
-        ".dot {background: transparent; border: 2px solid #65113b;}"
-      ],
-      "settings": {
-        "heading": "Overall Heading",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "padding_top": 64,
-        "padding_bottom": 0,
-        "color_scheme": ""
-      }
-    },
     "8181658b-e814-40e1-81cf-1e8a215a8010": {
       "type": "rich-text",
       "blocks": {
@@ -357,6 +316,52 @@
         "padding_bottom": 36
       }
     },
+    "01f9ebdb-335d-4df7-ad60-b3ed4e7c6d8e": {
+      "type": "rotating-products",
+      "blocks": {
+        "38a7782d-7d8a-4bd4-a8c3-c0d718fcc397": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "color_scheme": "background-1",
+            "productName1": "Product Name",
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
+          }
+        },
+        "08b02247-c35e-4e92-9cc6-877f7264ce85": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "color_scheme": "background-1",
+            "productName1": "Product Name",
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
+          }
+        }
+      },
+      "block_order": [
+        "38a7782d-7d8a-4bd4-a8c3-c0d718fcc397",
+        "08b02247-c35e-4e92-9cc6-877f7264ce85"
+      ],
+      "custom_css": [
+        ".dot.is-selected {opacity: 1; background: #65113b;}",
+        ".dot {background: transparent; border: 2px solid #65113b;}"
+      ],
+      "settings": {
+        "heading": "Overall Heading",
+        "id": "0",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "color_scheme": ""
+      }
+    },
     "aeb7b996-0263-4a89-8090-e217e1bd6a36": {
       "type": "rotating-products",
       "blocks": {
@@ -369,7 +374,9 @@
             "topImage_mobile": "shopify:\/\/shop_images\/Freeze-Dried_image_1.svg",
             "color_scheme": "accent-2",
             "productName1": "Product Name",
-            "productName2": "Product Name"
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
           }
         },
         "a98aacad-237c-408c-8161-f0a3542bccfa": {
@@ -379,7 +386,9 @@
             "subheading": "Beef Liver",
             "color_scheme": "background-1",
             "productName1": "Product Name",
-            "productName2": "Product Name"
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
           }
         },
         "6deb6648-e104-46ff-880e-292d71a54629": {
@@ -389,7 +398,9 @@
             "subheading": "PB'Nana Pie",
             "color_scheme": "background-1",
             "productName1": "Product Name",
-            "productName2": "Product Name"
+            "product-url1": "",
+            "productName2": "Product Name",
+            "product-url2": ""
           }
         }
       },
@@ -406,6 +417,7 @@
       ],
       "settings": {
         "heading": "Your pup will also enjoy...",
+        "id": "0",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "padding_top": 36,
@@ -526,7 +538,6 @@
   },
   "order": [
     "main",
-    "01f9ebdb-335d-4df7-ad60-b3ed4e7c6d8e",
     "8181658b-e814-40e1-81cf-1e8a215a8010",
     "ac8288b8-a720-41dd-b29f-447454d170d5",
     "5c9eba89-893b-404f-bec7-1c1862426eff",
@@ -535,6 +546,7 @@
     "e6c9435c-ac78-4ad7-bf1b-1f6e3464868d",
     "d5df72cc-43b7-4657-9acd-b85444bceff2",
     "c167b469-c03d-437a-86e9-b4077450479f",
+    "01f9ebdb-335d-4df7-ad60-b3ed4e7c6d8e",
     "aeb7b996-0263-4a89-8090-e217e1bd6a36",
     "2f089e0e-af7f-43f1-b527-d243ae8f7bbe",
     "5b7ae12d-d356-4314-9c06-7aa1778e567d"
